@@ -1,0 +1,34 @@
+{
+    "name": "Player",
+    "maps": [
+        {
+            "name": "Game",
+            "id": "b80e8d8b-865a-421e-bb82-4d86e6d37574",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Value",
+                    "id": "4b18f1cb-a95d-4e79-8d36-043ff4a48566",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "3c8e2c88-f978-4a09-8cff-5c50b885ede1",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
