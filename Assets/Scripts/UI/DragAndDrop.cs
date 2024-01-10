@@ -23,15 +23,19 @@ public class DragAndDrop : MonoBehaviour
 
     private void Update()
     {
-        if(_raycast)
+        if (_raycast)
+        {
             CheckObject();
+            DetectCollisionWithOtherObject();
+        }
+
         if (_dragTower != null)
         {
             _dragTower.transform.position = _dragPosition;
             HighlightTower(); 
         }
         
-        DetecteCollisionWithOtherObject();
+        
     }
 
     public void BeginDrag(GameObject newTower)
@@ -49,8 +53,11 @@ public class DragAndDrop : MonoBehaviour
     public void Drop()
     {
         _raycast = false;
-        _dragTower.transform.position = _dragPosition;
-        _dragTower = null;
+        if(_dragTower != null)
+        {
+            _dragTower.transform.position = _dragPosition;
+            _dragTower = null;
+        }
     }
 
     private void HighlightTower()
@@ -67,11 +74,9 @@ public class DragAndDrop : MonoBehaviour
         }
     }
 
-    private void DetecteCollisionWithOtherObject()
+    private void DetectCollisionWithOtherObject()
     {
-        if (_collision.Count == 0)
-            _canDrop = true;
-        else
+        if (_collision.Count != 0)
             _canDrop = false;
     }
 
@@ -85,11 +90,15 @@ public class DragAndDrop : MonoBehaviour
         {
             _dragPosition = hit.point;
 
-            if (hit.transform.gameObject.tag == "NotPlaceableOn")
+            if (hit.transform.CompareTag("NotPlaceableOn"))
                 _canDrop = false;
-            else if (hit.transform.gameObject.tag == "PlaceableOn") 
+            else if (hit.transform.CompareTag("PlaceableOn")) 
                 _canDrop = true;
         }
-        Debug.DrawRay(Mouse.current.position.ReadValue(), Camera.main.transform.forward, Color.yellow);
+        else
+        {
+            _canDrop = false;
+        }
+        
     }
 }
