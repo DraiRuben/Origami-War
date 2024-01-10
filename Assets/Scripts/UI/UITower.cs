@@ -5,10 +5,10 @@ using UnityEngine.InputSystem;
 
 public class UITower : MonoBehaviour
 {
-    [SerializeField] GameObject _tower;
+    [SerializeField] private GameObject _tower;
 
-    public void SelectedTower()
+    public void SelectTower()
     {
-        Instantiate(_tower, transform.position, Quaternion.identity);
+        DragAndDrop.Instance.BeginDrag(_tower);
     }
 }

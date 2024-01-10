@@ -6,13 +6,22 @@
             "id": "b80e8d8b-865a-421e-bb82-4d86e6d37574",
             "actions": [
                 {
-                    "name": "New action",
+                    "name": "Mouse",
                     "type": "Value",
                     "id": "4b18f1cb-a95d-4e79-8d36-043ff4a48566",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Drop",
+                    "type": "Button",
+                    "id": "5060cc2e-1f6d-4f72-ad19-607e7c3e9f63",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -23,7 +32,18 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "Mouse",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "426305a5-ddf6-4a53-acea-528d70f59ab0",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Drop",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

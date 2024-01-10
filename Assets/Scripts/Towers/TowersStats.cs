@@ -7,5 +7,4 @@ public class TowersStats : ScriptableObject
 {
     public float _damage;
     public float _fireRate;
-    public GameObject _towers;
 }

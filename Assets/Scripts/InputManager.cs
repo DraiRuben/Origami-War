@@ -1,15 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class InputManager : MonoBehaviour
 {
-    void Start()
+    public void Drop(InputAction.CallbackContext context)
     {
-        
-    }
-    void Update()
-    {
-        
+        if (context.performed && DragAndDrop.Instance._raycast && DragAndDrop.Instance._canDrop)
+        {
+            DragAndDrop.Instance.Drop();
+        }
     }
 }
