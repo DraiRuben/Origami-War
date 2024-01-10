@@ -1,6 +1,9 @@
+using Sirenix.OdinInspector;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GameState : MonoBehaviour
 {
@@ -12,9 +15,19 @@ public class GameState : MonoBehaviour
     public int CurrentHealth;
     public int InitialHealth;
 
+    [Button]
+    private void GoToNextWaveDebug()
+    {
+        OnWaveChanged.Invoke(CurrentWave);
+    }
+    //Invoked when the player finishes the current wave and has the auto start next round enabled
+    //or if the player clicked on the start next round button with the toggle disabled
+    //or at the start of a new game, of course
+    public event Action<int> OnWaveChanged;
     private void Awake()
     {
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
+        CurrentHealth = InitialHealth;
     }
 }
