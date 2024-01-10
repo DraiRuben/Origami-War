@@ -55,7 +55,7 @@ public class EnemyPathManager : MonoBehaviour
                     {
                         //inflict damage since enemy arrived at the end of its path
 
-                        Destroy(currentEnemy.Object);
+                        Destroy(currentEnemy.Object.gameObject);
                         EnemiesOnPath[i] = null;
                         continue;
                     }
