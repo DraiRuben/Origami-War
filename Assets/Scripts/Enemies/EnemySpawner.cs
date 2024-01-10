@@ -44,7 +44,7 @@ public class EnemySpawner : MonoBehaviour
                 m_waveQueue.Dequeue();
                 m_waveQueue.TryPeek(out var Info);
                 if(Info != null)
-                RemainingCountToSpawn = Info.Amount;
+                    RemainingCountToSpawn = Info.Amount;
             }
 
         }
