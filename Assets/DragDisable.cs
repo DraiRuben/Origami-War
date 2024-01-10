@@ -1,19 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class DragDisable : MonoBehaviour, IPointerEnterHandler ,IPointerExitHandler
 {
-    [SerializeField] private DragAndDrop _dragAndDrop;
-    
     public void OnPointerEnter(PointerEventData eventData)
     {
-        _dragAndDrop._raycast = false;
+        DragAndDrop.Instance.StopDrag();
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        _dragAndDrop._raycast = true;     
+        DragAndDrop.Instance._raycast = true;     
     }
 }
