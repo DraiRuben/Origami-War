@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class UITower : MonoBehaviour
 {
-    [SerializeField] GameObject _tower;
+    [SerializeField] private GameObject _tower;
 
     public void SelectTower()
     {
