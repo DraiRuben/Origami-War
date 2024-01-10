@@ -12,4 +12,13 @@ public class InputManager : MonoBehaviour
             DragAndDrop.Instance.Drop();
         }
     }
+
+    public void Pause(InputAction.CallbackContext context)
+    {
+        UIManager.Instance._pauseMenu.SetActive(!UIManager.Instance._pauseMenu.activeSelf);
+        if (Time.timeScale == 0)
+            Time.timeScale = 1;
+        else if (Time.timeScale != 0)
+            Time.timeScale = 0;
+    }
 }

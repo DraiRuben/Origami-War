@@ -19,6 +19,7 @@ public class GameState : MonoBehaviour
     private void GoToNextWaveDebug()
     {
         OnWaveChanged.Invoke(CurrentWave);
+        UIManager.Instance._currentWave.SetText(CurrentWave.ToString());
     }
     //Invoked when the player finishes the current wave and has the auto start next round enabled
     //or if the player clicked on the start next round button with the toggle disabled
