@@ -47,6 +47,7 @@ public class DragAndDrop : MonoBehaviour
     public void StopDrag()
     { 
         _raycast = false;
+        _collision.Clear();
         Destroy(_dragTower);
     }
 
@@ -56,7 +57,10 @@ public class DragAndDrop : MonoBehaviour
         if(_dragTower != null)
         {
             _dragTower.transform.position = _dragPosition;
+            _dragTower.transform.GetChild(0).gameObject.SetActive(false);
+            _dragTower.transform.GetChild(1).gameObject.SetActive(false);
             _dragTower = null;
+            _collision.Clear();
         }
     }
 
@@ -91,9 +95,13 @@ public class DragAndDrop : MonoBehaviour
             _dragPosition = hit.point;
 
             if (hit.transform.CompareTag("NotPlaceableOn"))
+            {
                 _canDrop = false;
-            else if (hit.transform.CompareTag("PlaceableOn")) 
+            }
+            else if (hit.transform.CompareTag("PlaceableOn"))
+            {
                 _canDrop = true;
+            }
         }
         else
         {

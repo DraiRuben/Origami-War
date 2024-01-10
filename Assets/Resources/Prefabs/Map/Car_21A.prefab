@@ -430,7 +430,7 @@ GameObject:
   - component: {fileID: 65821881727477648}
   m_Layer: 0
   m_Name: Car_21A_Addon
-  m_TagString: Untagged
+  m_TagString: NotPlaceableOn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -564,7 +564,7 @@ GameObject:
   - component: {fileID: 65060746859415202}
   m_Layer: 0
   m_Name: Car_21A
-  m_TagString: Untagged
+  m_TagString: NotPlaceableOn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
