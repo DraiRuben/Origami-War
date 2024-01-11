@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -54,7 +53,8 @@ public class EnemyPathManager : MonoBehaviour
                     if (currentEnemy.CurrentPathIndex+1 >= m_pathPositions.Count)
                     {
                         //inflict damage since enemy arrived at the end of its path
-
+                        GameState.Instance.CurrentHealth -= currentEnemy.Object.MaxHealth;
+                        UIManager.Instance._life.SetText(GameState.Instance.CurrentHealth.ToString());
                         Destroy(currentEnemy.Object.gameObject);
                         EnemiesOnPath[i] = null;
                         continue;
