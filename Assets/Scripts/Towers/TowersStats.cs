@@ -6,21 +6,23 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Tower", menuName = "Tower")]
 public class TowersStats : ScriptableObject
 {
-    public uint Damage;
+    public int Damage;
     public float FireRate;
     public float Range;
+    public int Cost;
+    public bool AttackOnceEach;
 
-    public bool SlowEnemies;
-    [ShowIf(nameof(SlowEnemies))]
+    public bool InflictSlow;
+    [ShowIf(nameof(InflictSlow))]
     [Range(0,1f)]
     public float SlowMultiplier;
-    [ShowIf(nameof(SlowEnemies))]
+    [ShowIf(nameof(InflictSlow))]
     [MinValue(0.1f)]
     public float SlowDuration;
 
     public bool InflictDOT;
     [ShowIf(nameof(InflictDOT))]
-    public uint DOT;
+    public int DOT;
     [ShowIf(nameof(InflictDOT))]
     [MinValue(.1f)]
     public float DOTDuration;

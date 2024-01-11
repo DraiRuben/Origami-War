@@ -47,7 +47,7 @@ public class EnemyPathManager : MonoBehaviour
                 var currentEnemy = EnemiesOnPath[i];
                 if (currentEnemy.Object == null)
                 {
-                    currentEnemy = null;
+                    EnemiesOnPath[i] = null;
                     continue;
                 }
                 if (currentEnemy.MoveCoef >= .99f)

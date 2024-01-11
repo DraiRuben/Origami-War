@@ -12,6 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7745d9c61f549f344975cf4ffc8e48c3, type: 3}
   m_Name: Glue Tower
   m_EditorClassIdentifier: 
-  _damage: 0
-  _fireRate: 0
-  _towers: {fileID: 0}
+  Damage: 0
+  FireRate: 5
+  Range: 3
+  Cost: 0
+  InflictSlow: 1
+  SlowMultiplier: 0.399
+  SlowDuration: 3
+  InflictDOT: 0
+  DOT: 0
+  DOTDuration: 0
+  DOTInterval: 0

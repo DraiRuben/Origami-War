@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHealth: 2
-  CurrentHealth: 0
+  RewardMoney: 1
   MovementSpeed: 10
   DetectionRadius: 0.6
 --- !u!135 &6002219195156276837

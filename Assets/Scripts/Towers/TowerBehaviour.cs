@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class TowerBehaviour : MonoBehaviour
 {
-    [SerializeField] private TowersStats Stats;
+    public TowersStats Stats;
     private List<EnemyStats> EnemiesInRange;
     private void Awake()
     {
@@ -28,9 +28,19 @@ public class TowerBehaviour : MonoBehaviour
         {
             if (GameState.Instance.IsWaveRunning)
             {
+                EnemiesInRange.RemoveAll(x => x == null);
                 if(EnemiesInRange.Count > 0)
                 {
-                    Debug.Log("Attacked");
+                    EnemiesInRange[0].CurrentHealth -= Stats.Damage;
+                    if (Stats.InflictDOT)
+                    {
+                        EnemiesInRange[0].TakeDOT(Stats.DOT,Stats.DOTDuration,Stats.DOTInterval);
+                    }
+                    if (Stats.InflictSlow)
+                    {
+                        EnemiesInRange[0].TakeSlow(Stats.SlowMultiplier, Stats.SlowDuration);
+                    }
+                    if (Stats.AttackOnceEach) EnemiesInRange.RemoveAt(0);
                     yield return new WaitForSeconds(1f/Stats.FireRate);
                 }
 

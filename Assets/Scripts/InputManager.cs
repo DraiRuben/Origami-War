@@ -23,7 +23,7 @@ public class InputManager : MonoBehaviour
                 UIManager.Instance._pauseButtons.GetComponent<Button>().interactable = true;
                 UIManager.Instance._pauseButtons.GetComponent<Image>().color = new Color32(16, 217, 207, 255);
             }
-            else if (Time.timeScale != 0)
+            else
             {
                 Time.timeScale = 0;
                 UIManager.Instance._pauseButtons.GetComponent<Button>().interactable = false;
