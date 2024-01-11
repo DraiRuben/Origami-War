@@ -28,14 +28,11 @@ public class DragAndDrop : MonoBehaviour
             CheckObject();
             DetectCollisionWithOtherObject();
         }
-
         if (_dragTower != null)
         {
             _dragTower.transform.position = _dragPosition;
             HighlightTower(); 
         }
-        
-        
     }
 
     public void BeginDrag(GameObject newTower)
@@ -56,6 +53,7 @@ public class DragAndDrop : MonoBehaviour
         _raycast = false;
         if(_dragTower != null)
         {
+            GameState.Instance.Cash -= _dragTower.GetComponent<TowerBehaviour>().Stats.Cost;
             _dragTower.transform.position = _dragPosition;
             _dragTower.transform.GetChild(0).gameObject.SetActive(false);
             _dragTower.transform.GetChild(1).gameObject.SetActive(false);

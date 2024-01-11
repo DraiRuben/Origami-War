@@ -22,6 +22,13 @@ public class TowerBehaviour : MonoBehaviour
             PopulateAttackableEnemies();
         }
     }
+
+    [Button]
+    private void WinMoney()
+    {
+        GameState.Instance.Cash += EnemiesInRange[0].RewardMoney;
+    }
+    
     private IEnumerator ShootRoutine()
     {
         while (true)
