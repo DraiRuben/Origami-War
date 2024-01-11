@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -6,7 +7,7 @@ public class DragAndDrop : MonoBehaviour
 {
     public bool _raycast = true;
     private Vector3 _dragPosition;
-    private GameObject _dragTower;
+    [HideInInspector] public GameObject _dragTower;
     public bool _canDrop;
     
     public static DragAndDrop Instance;
@@ -62,7 +63,6 @@ public class DragAndDrop : MonoBehaviour
             _collision.Clear();
         }
     }
-
     private void HighlightTower()
     {
         if (_canDrop)

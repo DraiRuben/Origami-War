@@ -25,6 +25,9 @@ public class InputManager : MonoBehaviour
             }
             else
             {
+                if (DragAndDrop.Instance._dragTower != null)
+                    Destroy(DragAndDrop.Instance._dragTower);
+                
                 Time.timeScale = 0;
                 UIManager.Instance._pauseButtons.GetComponent<Button>().interactable = false;
                 UIManager.Instance._pauseButtons.GetComponent<Image>().color = new Color32(255, 255, 255, 255);

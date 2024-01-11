@@ -53,8 +53,11 @@ public class UIManager : MonoBehaviour
             _pauseButtons.GetComponent<Button>().interactable = true;
             _pauseButtons.GetComponent<Image>().color = new Color32(16, 217, 207, 255);
         }
-        else if (Time.timeScale != 0)
+        else 
         {
+            if (DragAndDrop.Instance._dragTower != null)
+                Destroy(DragAndDrop.Instance._dragTower);
+            
             Time.timeScale = 0;
             _pauseButtons.GetComponent<Button>().interactable = false;
             _pauseButtons.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
