@@ -15,7 +15,9 @@ MonoBehaviour:
   Damage: 0
   FireRate: 0.5
   Range: 3
-  SlowEnemies: 0
+  Cost: 0
+  AttackOnceEach: 1
+  InflictSlow: 0
   SlowMultiplier: 0
   SlowDuration: 0.57
   InflictDOT: 1
