@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class TowerBehaviour : MonoBehaviour
 {
-    [SerializeField] private TowersStats Stats;
+    public TowersStats Stats;
     private List<EnemyStats> EnemiesInRange;
     private void Awake()
     {
@@ -22,6 +22,13 @@ public class TowerBehaviour : MonoBehaviour
             PopulateAttackableEnemies();
         }
     }
+
+    [Button]
+    private void WinMoney()
+    {
+        GameState.Instance.Cash += EnemiesInRange[0].RewardMoney;
+    }
+    
     private IEnumerator ShootRoutine()
     {
         while (true)

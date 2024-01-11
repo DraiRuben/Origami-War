@@ -33,6 +33,13 @@ public class UIManager : MonoBehaviour
         _currentWave.SetText(GameState.Instance.CurrentWave.ToString());
         _maxWave.SetText(GameState.Instance.LastWave.ToString());
         _cash.SetText(GameState.Instance.Cash.ToString());
+
+        GameState.Instance.OnMoneyChanged += SetCashText;
+    }
+
+    private void SetCashText(int newCash)
+    {
+        _cash.SetText(newCash.ToString());
     }
     
     /*--------------------------------------------------BUTTONS--------------------------------------------------*/

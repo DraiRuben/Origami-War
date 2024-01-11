@@ -9,6 +9,7 @@ public class TowersStats : ScriptableObject
     public uint Damage;
     public float FireRate;
     public float Range;
+    public int Cost;
 
     public bool SlowEnemies;
     [ShowIf(nameof(SlowEnemies))]

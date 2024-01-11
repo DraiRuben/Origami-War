@@ -6,6 +6,7 @@ public class EnemyStats : MonoBehaviour
 {
     public int MaxHealth;
     public int CurrentHealth;
+    public int RewardMoney;
 
     public float MovementSpeed;
     public float DetectionRadius;

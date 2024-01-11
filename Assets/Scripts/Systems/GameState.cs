@@ -27,6 +27,19 @@ public class GameState : MonoBehaviour
         IsWaveRunning = true;
         UIManager.Instance._currentWave.SetText(CurrentWave.ToString());
     }
+
+    [Button]
+    private void WinMoney()
+    {
+        Cash += 5;
+    }
+
+    [Button]
+    private void LostMoney()
+    {
+        Cash -= 5;
+    }
+    
     //Invoked when the player finishes the current wave and has the auto start next round enabled
     //or if the player clicked on the start next round button with the toggle disabled
     //or at the start of a new game, of course
