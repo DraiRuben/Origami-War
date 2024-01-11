@@ -134,7 +134,7 @@ public class Switch : MonoBehaviour
             Vector2 newPosition = Vector2.Lerp(fromPosition, toPosition, t);
             button.anchoredPosition = newPosition;
 
-            currentTime += Time.deltaTime;
+            currentTime += Time.unscaledDeltaTime;
             yield return null;
         }
         try
@@ -143,7 +143,7 @@ public class Switch : MonoBehaviour
         }
         catch
         {
-            Debug.Log("Add your customized Functions!! :)");
+            //toggle is on
         }
     }
 
@@ -161,7 +161,7 @@ public class Switch : MonoBehaviour
 
             backgrounImageAndColor.color = newColor;
 
-            currentTime += Time.deltaTime;
+            currentTime += Time.unscaledDeltaTime;
             yield return null;
         }
     }
@@ -180,7 +180,7 @@ public class Switch : MonoBehaviour
 
             buttonColor.color = newColor;
 
-            currentTime += Time.deltaTime;
+            currentTime += Time.unscaledDeltaTime;
             yield return null;
         }
     }
