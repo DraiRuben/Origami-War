@@ -87,7 +87,7 @@ public class DragAndDrop : MonoBehaviour
     {
         var ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
 
-        Physics.Raycast(ray, out var hit);
+        Physics.Raycast(ray, out var hit,999999,~LayerMask.GetMask("Tower"));
 
         if (hit.collider != null)
         {

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 0
   FireRate: 0.5
-  Range: 3
+  Range: 2.5
   Cost: 300
   AttackOnceEach: 1
   InflictSlow: 0

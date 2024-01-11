@@ -5,6 +5,12 @@ using UnityEngine;
 
 public class TowerCollisionDetection : MonoBehaviour
 {
+    private void Start()
+    {
+        var ScaleMultiplier = GetComponent<TowerBehaviour>().Stats.Range*2;
+        transform.GetChild(0).localScale *= ScaleMultiplier;
+        transform.GetChild(1).localScale *= ScaleMultiplier;
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.transform.gameObject.CompareTag("NotPlaceableOn"))
