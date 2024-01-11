@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 65307594477573826}
   - component: {fileID: 4453855157978363531}
   - component: {fileID: 4626871304087615535}
+  - component: {fileID: -6874850425344175684}
   m_Layer: 2
   m_Name: Water
   m_TagString: NotPlaceableOn
@@ -148,6 +149,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!114 &-6874850425344175684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559464623955436}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e02ea0be5a7d564ebfd6e2c95679f31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stats: {fileID: 11400000, guid: 17328bc58d36de4488007da3a95e3984, type: 2}
 --- !u!1 &2419219967797867029
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,7 +11,10 @@ public class GameState : MonoBehaviour
 
     public int CurrentWave;
     public int LastWave;
-    public int Cash;
+    [SerializeField] private int _cash;
+    public int Cash { get { return _cash; } set { _cash = value; OnMoneyChanged.Invoke(value); } }
+
+    public event Action<int> OnMoneyChanged;
     public int CurrentHealth;
     public int InitialHealth;
     public bool IsWaveRunning;
@@ -34,5 +37,9 @@ public class GameState : MonoBehaviour
         else Destroy(gameObject);
         CurrentHealth = InitialHealth;
         Paths = new List<EnemyPathManager>();
+    }
+    private void Start()
+    {
+        Cash = _cash;
     }
 }
