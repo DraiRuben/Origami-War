@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7745d9c61f549f344975cf4ffc8e48c3, type: 3}
   m_Name: Water Tower
   m_EditorClassIdentifier: 
-  Damage: 0
-  FireRate: 0
-  Range: 0
+  Damage: 2
+  FireRate: 0.5
+  Range: 3
   Cost: 150
-  SlowEnemies: 0
+  AttackOnceEach: 0
+  InflictSlow: 0
   SlowMultiplier: 0
   SlowDuration: 0
   InflictDOT: 0
