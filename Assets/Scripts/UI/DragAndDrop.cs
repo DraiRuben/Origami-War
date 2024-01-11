@@ -59,6 +59,7 @@ public class DragAndDrop : MonoBehaviour
             _dragTower.transform.position = _dragPosition;
             _dragTower.transform.GetChild(0).gameObject.SetActive(false);
             _dragTower.transform.GetChild(1).gameObject.SetActive(false);
+            _dragTower.GetComponent<TowerBehaviour>().enabled = true;
             _dragTower = null;
             _collision.Clear();
         }

@@ -15,10 +15,13 @@ public class GameState : MonoBehaviour
     public int CurrentHealth;
     public int InitialHealth;
     public bool IsWaveRunning;
+
+    public List<EnemyPathManager> Paths;
     [Button]
     private void GoToNextWaveDebug()
     {
         OnWaveChanged.Invoke(CurrentWave);
+        IsWaveRunning = true;
         UIManager.Instance._currentWave.SetText(CurrentWave.ToString());
     }
     //Invoked when the player finishes the current wave and has the auto start next round enabled
@@ -30,5 +33,6 @@ public class GameState : MonoBehaviour
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
         CurrentHealth = InitialHealth;
+        Paths = new List<EnemyPathManager>();
     }
 }

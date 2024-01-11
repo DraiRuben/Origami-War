@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7745d9c61f549f344975cf4ffc8e48c3, type: 3}
   m_Name: Fire Tower
   m_EditorClassIdentifier: 
-  _damage: 0
-  _fireRate: 0
+  Damage: 0
+  FireRate: 0.5
+  Range: 3
   SlowEnemies: 0
   SlowMultiplier: 0
   SlowDuration: 0.57
-  InflictDOT: 0
-  DOT: 0
-  DOTDuration: 0.1
-  DOTInterval: 0.41
+  InflictDOT: 1
+  DOT: 1
+  DOTDuration: 5
+  DOTInterval: 1

@@ -17,6 +17,10 @@ public class EnemyPathManager : MonoBehaviour
         LR.GetPositions(Positions);
         m_pathPositions = Positions.ToList();
     }
+    private void Start()
+    {
+        GameState.Instance.Paths.Add(this);
+    }
     public void AddEnemyToManager(GameObject toManage)
     {
         EnemiesOnPath.Add(new Enemy(toManage.GetComponent<EnemyStats>()));

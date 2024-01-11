@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 65969575189649890}
   - component: {fileID: 6948848048284127737}
   - component: {fileID: 1549802162574213167}
+  - component: {fileID: -4040295210178919102}
   m_Layer: 2
   m_Name: Fire
   m_TagString: NotPlaceableOn
@@ -121,7 +122,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f588b9be7cfcda9479ab2db8e5e6d6da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _collision: []
 --- !u!54 &1549802162574213167
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -149,6 +149,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!114 &-4040295210178919102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376557422489878}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e02ea0be5a7d564ebfd6e2c95679f31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stats: {fileID: 11400000, guid: 209110ad4acb448408cfc64ad5b65ec7, type: 2}
 --- !u!1 &4025408866558079022
 GameObject:
   m_ObjectHideFlags: 0
