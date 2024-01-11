@@ -8,7 +8,7 @@ public class EnemyStats : MonoBehaviour
     public int CurrentHealth;
 
     public float MovementSpeed;
-
+    public float DetectionRadius;
     private void Awake()
     {
         CurrentHealth = MaxHealth;

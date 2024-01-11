@@ -14,7 +14,7 @@ public class GameState : MonoBehaviour
     public int Cash;
     public int CurrentHealth;
     public int InitialHealth;
-
+    public bool IsWaveRunning;
     [Button]
     private void GoToNextWaveDebug()
     {

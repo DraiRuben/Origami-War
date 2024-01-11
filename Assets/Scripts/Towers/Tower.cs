@@ -9,7 +9,7 @@ public class Tower : MonoBehaviour
 
     private void Awake()
     {
-        _damage = _towersStats._damage;
-        _fireRate = _towersStats._fireRate;
+        _damage = _towersStats.Damage;
+        _fireRate = _towersStats.FireRate;
     }
 }
