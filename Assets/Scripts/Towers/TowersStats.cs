@@ -11,6 +11,9 @@ public class TowersStats : ScriptableObject
     public float Range;
     public int Cost;
     public bool AttackOnceEach;
+    public GameObject Projectile;
+    [MinValue(.001f)]
+    public float ProjectileSpeed;
 
     public bool InflictSlow;
     [ShowIf(nameof(InflictSlow))]

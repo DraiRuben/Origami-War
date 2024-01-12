@@ -11248,7 +11248,7 @@ MonoBehaviour:
   - ToSpawn:
     - ToSpawn: {fileID: 1675308188217246, guid: 62ae8e86000119d4cb5f57b6baeff572, type: 3}
       Amount: 5
-      SpawnWaitTime: 1.5
+      SpawnWaitTime: 1
   m_pathManager: {fileID: 1076718291}
 --- !u!4 &1325940936
 Transform:
@@ -11589,7 +11589,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentWave: 0
   LastWave: 40
-  _cash: 149
+  _cash: 5000
   CurrentHealth: 0
   InitialHealth: 100
   IsWaveRunning: 0

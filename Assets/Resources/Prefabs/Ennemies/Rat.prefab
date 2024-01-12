@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90434143480ed5947bf8a7ff5b48b035, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 2
+  MaxHealth: 1
   RewardMoney: 1
   MovementSpeed: 10
   DetectionRadius: 0.3
