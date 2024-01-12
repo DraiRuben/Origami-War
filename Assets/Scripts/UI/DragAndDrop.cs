@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -6,7 +7,7 @@ public class DragAndDrop : MonoBehaviour
 {
     public bool _raycast = true;
     private Vector3 _dragPosition;
-    private GameObject _dragTower;
+    [HideInInspector] public GameObject _dragTower;
     public bool _canDrop;
     
     public static DragAndDrop Instance;
@@ -53,6 +54,7 @@ public class DragAndDrop : MonoBehaviour
         _raycast = false;
         if(_dragTower != null)
         {
+            StartCoroutine(TowerIsPlaced(_dragTower));
             GameState.Instance.Cash -= _dragTower.GetComponent<TowerBehaviour>().Stats.Cost;
             _dragTower.transform.position = _dragPosition;
             _dragTower.transform.GetChild(0).gameObject.SetActive(false);
@@ -63,6 +65,11 @@ public class DragAndDrop : MonoBehaviour
         }
     }
 
+    private IEnumerator TowerIsPlaced(GameObject tower)
+    {
+        yield return new WaitForSeconds(0.1f);
+        tower.GetComponent<PlaceTowerInteraction>()._isPlaced = true;
+    }
     private void HighlightTower()
     {
         if (_canDrop)

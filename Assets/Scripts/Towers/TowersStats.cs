@@ -15,6 +15,8 @@ public class TowersStats : ScriptableObject
     [MinValue(.001f)]
     public float ProjectileSpeed;
 
+    public string Desc;
+
     public bool InflictSlow;
     [ShowIf(nameof(InflictSlow))]
     [Range(0,1f)]

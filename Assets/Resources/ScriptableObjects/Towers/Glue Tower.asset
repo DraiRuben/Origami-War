@@ -19,6 +19,7 @@ MonoBehaviour:
   AttackOnceEach: 1
   Projectile: {fileID: 100000, guid: 89d8c5b96bd715c4e8569910516adbf7, type: 3}
   ProjectileSpeed: 30
+  Desc: Slow down enemies with glue
   InflictSlow: 1
   SlowMultiplier: 0.399
   SlowDuration: 3

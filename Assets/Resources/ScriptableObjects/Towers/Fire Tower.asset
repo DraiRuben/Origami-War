@@ -19,6 +19,7 @@ MonoBehaviour:
   AttackOnceEach: 1
   Projectile: {fileID: 1892503597542226, guid: 09e575d3fd166f4489c573635ce22f38, type: 3}
   ProjectileSpeed: 30
+  Desc: Set enemies on fire.
   InflictSlow: 0
   SlowMultiplier: 0
   SlowDuration: 0.57

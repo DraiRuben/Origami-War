@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 2356092}
   - component: {fileID: -3761945929682429558}
   - component: {fileID: 2363359330924958786}
+  - component: {fileID: 3782516569954890043}
+  - component: {fileID: 921012410500486160}
   m_Layer: 7
   m_Name: Tower_Fire1
   m_TagString: NotPlaceableOn
@@ -113,6 +115,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Stats: {fileID: 11400000, guid: 209110ad4acb448408cfc64ad5b65ec7, type: 2}
+--- !u!114 &3782516569954890043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93c9b9a5149544946acf04183931f6b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &921012410500486160
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135558}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5532717, y: 1.0449288, z: 0.55331403}
+  m_Center: {x: 0, y: 0.5249685, z: 0}
 --- !u!1 &2317273221154962376
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,16 +1,36 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class InputManager : MonoBehaviour
 {
+    [SerializeField] private GameObject TowerInformation;
+    public GameObject SelectedTower;
+    public bool _HideUI = true;
+
+    public static InputManager Instance;
+
+    private void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
+    }
+
     public void Drop(InputAction.CallbackContext context)
     {
-        if (context.performed )
+        if (context.performed)
         {
             if(DragAndDrop.Instance._raycast && DragAndDrop.Instance._canDrop)
-            {
                 DragAndDrop.Instance.Drop();
+            else if(_HideUI)
+            {
+                TowerInformation.SetActive(false);
+                if(SelectedTower != null)
+                    SelectedTower.transform.GetChild(0).gameObject.SetActive(false);
+                SelectedTower = null;
             }
         }
     }
@@ -28,6 +48,9 @@ public class InputManager : MonoBehaviour
             }
             else
             {
+                if (DragAndDrop.Instance._dragTower != null)
+                    Destroy(DragAndDrop.Instance._dragTower);
+                
                 Time.timeScale = 0;
                 UIManager.Instance._pauseButtons.GetComponent<Button>().interactable = false;
                 UIManager.Instance._pauseButtons.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
