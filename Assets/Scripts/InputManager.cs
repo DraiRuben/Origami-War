@@ -70,4 +70,12 @@ public class InputManager : MonoBehaviour
             UIManager.Instance._settingsMenu.SetActive(!UIManager.Instance._settingsMenu.activeSelf);
         }
     }
+
+    public void Cancel(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            DragAndDrop.Instance.StopDrag();
+        }
+    }
 }
