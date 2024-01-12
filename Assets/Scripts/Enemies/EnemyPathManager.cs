@@ -21,9 +21,9 @@ public class EnemyPathManager : MonoBehaviour
     {
         GameState.Instance.Paths.Add(this);
     }
-    public void AddEnemyToManager(GameObject toManage)
+    public void AddEnemyToManager(EnemyStats toManage)
     {
-        EnemiesOnPath.Add(new Enemy(toManage.GetComponent<EnemyStats>()));
+        EnemiesOnPath.Add(new Enemy(toManage));
     }
     [Serializable]
     public class Enemy
@@ -50,7 +50,7 @@ public class EnemyPathManager : MonoBehaviour
                     EnemiesOnPath[i] = null;
                     continue;
                 }
-                if (currentEnemy.MoveCoef >= .99f)
+                if (currentEnemy.MoveCoef >= 1f)
                 {
                     currentEnemy.MoveCoef = 0;
                     currentEnemy.CurrentPathIndex++;

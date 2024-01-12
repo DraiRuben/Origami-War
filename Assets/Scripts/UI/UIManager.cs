@@ -30,7 +30,7 @@ public class UIManager : MonoBehaviour
     private void Start()
     {
         _life.SetText(GameState.Instance.InitialHealth.ToString());
-        _currentWave.SetText(GameState.Instance.CurrentWave.ToString());
+        _currentWave.SetText((GameState.Instance.CurrentWave+1).ToString());
         _maxWave.SetText(GameState.Instance.LastWave.ToString());
         _cash.SetText(GameState.Instance.Cash.ToString());
 

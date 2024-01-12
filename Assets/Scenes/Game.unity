@@ -7654,7 +7654,6 @@ MonoBehaviour:
   _maxWave: {fileID: 2114616983}
   _pauseMenu: {fileID: 674241928}
   _settingsMenu: {fileID: 7008317221758875637}
-  TowerInformation: {fileID: 0}
   _pauseButtons: {fileID: 956331133}
 --- !u!1001 &926802305
 PrefabInstance:
@@ -11596,7 +11595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d7cc57ac535ef14382a90af1e80343a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentWave: 0
+  _currentWave: 0
   LastWave: 40
   _cash: 5000
   CurrentHealth: 0
@@ -16581,6 +16580,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2030911414}
+  - component: {fileID: 2030911415}
   m_Layer: 0
   m_Name: EnemySpawn 2
   m_TagString: Untagged
@@ -16604,6 +16604,21 @@ Transform:
   - {fileID: 1753510828}
   m_Father: {fileID: 233830706}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2030911415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030911413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a714c58f07118c64ab279883ffa8333a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Waves:
+  - ToSpawn: []
+  m_pathManager: {fileID: 1753510829}
 --- !u!1001 &2037731282
 PrefabInstance:
   m_ObjectHideFlags: 0

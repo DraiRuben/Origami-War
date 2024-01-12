@@ -2,13 +2,23 @@ using Sirenix.OdinInspector;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
     public List<Wave> Waves;
-    private Queue<SpawnInfo> m_waveQueue = new();
+    public Queue<SpawnInfo> WaveQueue = new();
     [SerializeField] private EnemyPathManager m_pathManager;
+
+    private static List<EnemySpawner> Spawners;
+    private void Awake()
+    {
+        Spawners ??= new List<EnemySpawner>();
+
+        Spawners.Add(this);
+        Spawners.RemoveAll(x => x == null);
+    }
     void Start()
     {
         GameState.Instance.OnWaveChanged += QueueWave;
@@ -21,28 +31,33 @@ public class EnemySpawner : MonoBehaviour
         {
             for (int i = 0; i < Waves[Wave].ToSpawn.Count; i++)
             {
-                m_waveQueue.Enqueue(Waves[Wave].ToSpawn[i]);
+                WaveQueue.Enqueue(Waves[Wave].ToSpawn[i]);
             }
+            if(WaveQueue.Count > 0)
             StartCoroutine(SpawnRoutine());
         }
     }
     private IEnumerator SpawnRoutine()
     {
         //get the amount to spawn
-        int RemainingCountToSpawn = m_waveQueue.Peek().Amount;
+        int RemainingCountToSpawn = WaveQueue.Peek().Amount;
         //tries to spawn things while we still have things to spawn that are in the queue
-        while (m_waveQueue.Count > 0)
+        while (WaveQueue.Count > 0)
         {
             //decrease the remaining count then instantiates to corresponding element and waits for a certain time
             RemainingCountToSpawn--;
-            m_pathManager.AddEnemyToManager(Instantiate(m_waveQueue.Peek().ToSpawn, transform.position, m_waveQueue.Peek().ToSpawn.transform.rotation));
-            yield return new WaitForSeconds(m_waveQueue.Peek().SpawnWaitTime);
+            var NewEnemy = Instantiate(WaveQueue.Peek().ToSpawn, transform.position, WaveQueue.Peek().ToSpawn.transform.rotation);
+            var EnemyComp = NewEnemy.GetComponent<EnemyStats>();
+            EnemyComp.OnEnemyDeath.AddListener(TryEndWave);
+
+            m_pathManager.AddEnemyToManager(EnemyComp);
+            yield return new WaitForSeconds(WaveQueue.Peek().SpawnWaitTime);
 
             //after waiting we try to see if we need to start spawning the next element, ie: the amount remaining is 0
             if (RemainingCountToSpawn <= 0)
             {
-                m_waveQueue.Dequeue();
-                m_waveQueue.TryPeek(out SpawnInfo Info);
+                WaveQueue.Dequeue();
+                WaveQueue.TryPeek(out SpawnInfo Info);
                 if (Info != null)
                     RemainingCountToSpawn = Info.Amount;
             }
@@ -53,7 +68,14 @@ public class EnemySpawner : MonoBehaviour
         //this is needed since the player could easily just kill everything we throw at him before we finish spawning everything, but we wouldn't want the wave to end before we finished spawning all we need
         yield return null;
     }
-
+    private void TryEndWave()
+    {
+        var empty = Spawners.All(x => x.WaveQueue.Count <= 0);
+        if (EnemyStats.EnemyCount <= 0 && empty)
+        {
+            WaveTransition.Instance.EndWave();
+        }
+    }
     [Serializable]
     public struct Wave
     {

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2363359330924958786}
   - component: {fileID: 3782516569954890043}
   - component: {fileID: 921012410500486160}
+  - component: {fileID: -5037726029371753493}
   m_Layer: 7
   m_Name: Tower_Fire1
   m_TagString: NotPlaceableOn
@@ -127,6 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93c9b9a5149544946acf04183931f6b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsPlaced: 0
 --- !u!65 &921012410500486160
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -142,12 +144,39 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.5532717, y: 1.0449288, z: 0.55331403}
   m_Center: {x: 0, y: 0.5249685, z: 0}
+--- !u!54 &-5037726029371753493
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135558}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2317273221154962376
 GameObject:
   m_ObjectHideFlags: 0

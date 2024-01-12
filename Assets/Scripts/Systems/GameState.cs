@@ -7,23 +7,36 @@ public class GameState : MonoBehaviour
 {
     public static GameState Instance;
 
-    public int CurrentWave;
+    [SerializeField] private int _currentWave;
+    public int CurrentWave
+    {
+        get { return _currentWave; }
+        set { _currentWave = value; OnWaveChanged.Invoke(value); }
+    }
     public int LastWave;
+    public event Action<int> OnWaveChanged;
+
     [SerializeField] private int _cash;
-    public int Cash { get { return _cash; } set { _cash = value; OnMoneyChanged.Invoke(value); } }
+    public int Cash 
+    { 
+        get { return _cash; } 
+        set { _cash = value; OnMoneyChanged.Invoke(value); } 
+    }
 
     public event Action<int> OnMoneyChanged;
+
     public int CurrentHealth;
     public int InitialHealth;
     public bool IsWaveRunning;
 
     public List<EnemyPathManager> Paths;
+
     [Button]
     private void GoToNextWaveDebug()
     {
         OnWaveChanged.Invoke(CurrentWave);
         IsWaveRunning = true;
-        UIManager.Instance._currentWave.SetText(CurrentWave.ToString());
+        UIManager.Instance._currentWave.SetText((CurrentWave+1).ToString());
     }
 
     [Button]
@@ -41,7 +54,6 @@ public class GameState : MonoBehaviour
     //Invoked when the player finishes the current wave and has the auto start next round enabled
     //or if the player clicked on the start next round button with the toggle disabled
     //or at the start of a new game, of course
-    public event Action<int> OnWaveChanged;
     private void Awake()
     {
         if (Instance == null) Instance = this;

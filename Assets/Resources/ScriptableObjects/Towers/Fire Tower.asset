@@ -18,7 +18,7 @@ MonoBehaviour:
   Cost: 300
   AttackOnceEach: 1
   Projectile: {fileID: 1892503597542226, guid: 09e575d3fd166f4489c573635ce22f38, type: 3}
-  ProjectileSpeed: 30
+  ProjectileSpeed: 50
   Desc: Set enemies on fire.
   InflictSlow: 0
   SlowMultiplier: 0

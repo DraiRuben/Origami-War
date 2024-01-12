@@ -18,7 +18,7 @@ MonoBehaviour:
   Cost: 150
   AttackOnceEach: 0
   Projectile: {fileID: 1892503597542226, guid: 09e575d3fd166f4489c573635ce22f38, type: 3}
-  ProjectileSpeed: 30
+  ProjectileSpeed: 50
   Desc: Throws a jet of water at enemies.
   InflictSlow: 0
   SlowMultiplier: 0

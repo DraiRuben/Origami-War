@@ -18,13 +18,14 @@ public class UITower : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         if (newCash < _tower.GetComponent<TowerBehaviour>().Stats.Cost)
         {
-            GetComponent<Image>().color = Unavailable;
             _canUse = false;
+            GetComponent<Image>().color = Unavailable;
         }
         else
-        {
-            GetComponent<Image>().color = Available;
+        {            
             _canUse = true;
+            GetComponent<Image>().color = Available;
+
         }
     }
 
