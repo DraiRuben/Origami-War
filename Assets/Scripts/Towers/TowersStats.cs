@@ -11,6 +11,7 @@ public class TowersStats : ScriptableObject
     public float Range;
     public int Cost;
     public bool AttackOnceEach;
+    public string Desc;
 
     public bool InflictSlow;
     [ShowIf(nameof(InflictSlow))]

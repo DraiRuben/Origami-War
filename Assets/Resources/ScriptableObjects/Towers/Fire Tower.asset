@@ -17,6 +17,7 @@ MonoBehaviour:
   Range: 2.5
   Cost: 300
   AttackOnceEach: 1
+  Desc: Set enemies on fire.
   InflictSlow: 0
   SlowMultiplier: 0
   SlowDuration: 0.57

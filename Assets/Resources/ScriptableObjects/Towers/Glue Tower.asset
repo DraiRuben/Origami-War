@@ -17,6 +17,7 @@ MonoBehaviour:
   Range: 6.9
   Cost: 200
   AttackOnceEach: 1
+  Desc: Slow down enemies with glue
   InflictSlow: 1
   SlowMultiplier: 0.399
   SlowDuration: 3

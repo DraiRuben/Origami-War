@@ -127,6 +127,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93c9b9a5149544946acf04183931f6b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TowerInformation: {fileID: 0}
+  _isPlaced: 0
+  Desc: {fileID: 0}
+  SalesGain: {fileID: 0}
 --- !u!65 &-2054307973170140665
 BoxCollider:
   m_ObjectHideFlags: 0

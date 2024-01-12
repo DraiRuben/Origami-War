@@ -14,6 +14,7 @@ public class UIManager : MonoBehaviour
     [Header("Menus")]
     public GameObject _pauseMenu;
     public GameObject _settingsMenu;
+    public GameObject TowerInformation;
 
     [Header("Buttons")] 
     public GameObject _pauseButtons;
@@ -43,7 +44,14 @@ public class UIManager : MonoBehaviour
     }
     
     /*--------------------------------------------------BUTTONS--------------------------------------------------*/
-
+    public void Sell()
+    {
+        if(InputManager.Instance.SelectedTower != null)
+            GameState.Instance.Cash += InputManager.Instance.SelectedTower.GetComponent<TowerBehaviour>().Stats.Cost / 2;
+        Destroy(InputManager.Instance.SelectedTower);
+        TowerInformation.SetActive(false);
+    }
+    
     public void Pause()
     {
         _pauseMenu.SetActive(!_pauseMenu.activeSelf);

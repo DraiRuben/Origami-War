@@ -126,8 +126,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93c9b9a5149544946acf04183931f6b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TowerInformation: {fileID: 1177602635811939958, guid: ee1132d33a84cff4394dde7fd942f772, type: 3}
-  Canvas: {fileID: 0}
+  TowerInformation: {fileID: 0}
+  _isPlaced: 0
+  Desc: {fileID: 0}
+  SalesGain: {fileID: 0}
 --- !u!65 &4157552624599405778
 BoxCollider:
   m_ObjectHideFlags: 0

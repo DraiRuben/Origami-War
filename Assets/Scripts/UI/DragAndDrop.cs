@@ -54,6 +54,7 @@ public class DragAndDrop : MonoBehaviour
         _raycast = false;
         if(_dragTower != null)
         {
+            StartCoroutine(TowerIsPlaced(_dragTower));
             GameState.Instance.Cash -= _dragTower.GetComponent<TowerBehaviour>().Stats.Cost;
             _dragTower.transform.position = _dragPosition;
             _dragTower.transform.GetChild(0).gameObject.SetActive(false);
@@ -62,6 +63,12 @@ public class DragAndDrop : MonoBehaviour
             _dragTower = null;
             _collision.Clear();
         }
+    }
+
+    private IEnumerator TowerIsPlaced(GameObject tower)
+    {
+        yield return new WaitForSeconds(0.1f);
+        tower.GetComponent<PlaceTowerInteraction>()._isPlaced = true;
     }
     private void HighlightTower()
     {

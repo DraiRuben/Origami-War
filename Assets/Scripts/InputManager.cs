@@ -1,14 +1,37 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class InputManager : MonoBehaviour
 {
+    [SerializeField] private GameObject TowerInformation;
+    public GameObject SelectedTower;
+    public bool _HideUI = true;
+
+    public static InputManager Instance;
+
+    private void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
+    }
+
     public void Drop(InputAction.CallbackContext context)
     {
-        if (context.performed && DragAndDrop.Instance._raycast && DragAndDrop.Instance._canDrop)
+        if (context.performed)
         {
-            DragAndDrop.Instance.Drop();
+            if(DragAndDrop.Instance._raycast && DragAndDrop.Instance._canDrop)
+                DragAndDrop.Instance.Drop();
+            else if(_HideUI)
+            {
+                TowerInformation.SetActive(false);
+                if(SelectedTower != null)
+                    SelectedTower.transform.GetChild(0).gameObject.SetActive(false);
+                SelectedTower = null;
+            }
         }
     }
 
