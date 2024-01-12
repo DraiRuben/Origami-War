@@ -38,6 +38,9 @@ public class DragAndDrop : MonoBehaviour
 
     public void BeginDrag(GameObject newTower)
     {
+        if(_dragTower!= null)
+            Destroy(_dragTower);
+        
         CheckObject();
         _dragTower = Instantiate(newTower, _dragPosition, Quaternion.identity);
     }

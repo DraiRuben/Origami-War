@@ -17,6 +17,8 @@ public class UIManager : MonoBehaviour
 
     [Header("Buttons")]
     public GameObject _pauseButtons;
+    public GameObject _starWaveButton;
+    
     public static UIManager Instance;
 
     private void Awake()
@@ -60,6 +62,9 @@ public class UIManager : MonoBehaviour
             Time.timeScale = 1;
             _pauseButtons.GetComponent<Button>().interactable = true;
             _pauseButtons.GetComponent<Image>().color = new Color32(16, 217, 207, 255);
+            
+            _starWaveButton.GetComponent<Button>().interactable = true;
+            _starWaveButton.GetComponent<Image>().color = new Color32(16, 217, 207, 255);
         }
         else
         {
@@ -68,7 +73,10 @@ public class UIManager : MonoBehaviour
 
             Time.timeScale = 0;
             _pauseButtons.GetComponent<Button>().interactable = false;
-            _pauseButtons.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+            _pauseButtons.GetComponent<Image>().color = Color.white;
+
+            _starWaveButton.GetComponent<Button>().interactable = false;
+            _starWaveButton.GetComponent<Image>().color = Color.white;
         }
     }
 

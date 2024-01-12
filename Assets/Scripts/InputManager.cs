@@ -47,6 +47,9 @@ public class InputManager : MonoBehaviour
                 Time.timeScale = 1;
                 UIManager.Instance._pauseButtons.GetComponent<Button>().interactable = true;
                 UIManager.Instance._pauseButtons.GetComponent<Image>().color = new Color32(16, 217, 207, 255);
+                
+                UIManager.Instance._starWaveButton.GetComponent<Button>().interactable = true;
+                UIManager.Instance._starWaveButton.GetComponent<Image>().color = new Color32(16, 217, 207, 255);
             }
             else
             {
@@ -55,13 +58,24 @@ public class InputManager : MonoBehaviour
 
                 Time.timeScale = 0;
                 UIManager.Instance._pauseButtons.GetComponent<Button>().interactable = false;
-                UIManager.Instance._pauseButtons.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+                UIManager.Instance._pauseButtons.GetComponent<Image>().color = Color.white;
+                
+                UIManager.Instance._starWaveButton.GetComponent<Button>().interactable = false;
+                UIManager.Instance._starWaveButton.GetComponent<Image>().color = Color.white;
             }
         }
         else if (context.started && UIManager.Instance._settingsMenu.activeSelf)
         {
             UIManager.Instance._pauseMenu.SetActive(!UIManager.Instance._pauseMenu.activeSelf);
             UIManager.Instance._settingsMenu.SetActive(!UIManager.Instance._settingsMenu.activeSelf);
+        }
+    }
+
+    public void Cancel(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            DragAndDrop.Instance.StopDrag();
         }
     }
 }

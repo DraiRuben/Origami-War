@@ -128,6 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsPlaced: 0
+  Area: {fileID: 6532625474870085665, guid: 07a977963523b3b4dbcaa27119f6b469, type: 3}
 --- !u!65 &4157552624599405778
 BoxCollider:
   m_ObjectHideFlags: 0
