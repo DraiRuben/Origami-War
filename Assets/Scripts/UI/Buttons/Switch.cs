@@ -35,7 +35,7 @@ public class Switch : MonoBehaviour
     Coroutine changeButtonColorCoroutine;
 
     public bool isOn;
-    [Range(0,10)]
+    [Range(0, 10)]
     public float moveDuration;
     [Range(0, 25)]
     public float buttonStartPosTmp = 25f;

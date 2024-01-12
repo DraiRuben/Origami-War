@@ -11,7 +11,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private EnemyPathManager m_pathManager;
     void Start()
     {
-        GameState.Instance.OnWaveChanged+= QueueWave;
+        GameState.Instance.OnWaveChanged += QueueWave;
     }
     //called when we start a new wave, it puts all elements to spawn in the wave spawn queue, one by one,
     //then it starts the coroutine that actually instantiates those elements
@@ -42,8 +42,8 @@ public class EnemySpawner : MonoBehaviour
             if (RemainingCountToSpawn <= 0)
             {
                 m_waveQueue.Dequeue();
-                m_waveQueue.TryPeek(out var Info);
-                if(Info != null)
+                m_waveQueue.TryPeek(out SpawnInfo Info);
+                if (Info != null)
                     RemainingCountToSpawn = Info.Amount;
             }
 

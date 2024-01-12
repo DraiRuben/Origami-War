@@ -1,6 +1,4 @@
 using Sirenix.OdinInspector;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Tower", menuName = "Tower")]
@@ -19,7 +17,7 @@ public class TowersStats : ScriptableObject
 
     public bool InflictSlow;
     [ShowIf(nameof(InflictSlow))]
-    [Range(0,1f)]
+    [Range(0, 1f)]
     public float SlowMultiplier;
     [ShowIf(nameof(InflictSlow))]
     [MinValue(0.1f)]

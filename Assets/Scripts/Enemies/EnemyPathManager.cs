@@ -12,7 +12,7 @@ public class EnemyPathManager : MonoBehaviour
     {
         EnemiesOnPath = new();
 
-        var LR = GetComponent<LineRenderer>();
+        LineRenderer LR = GetComponent<LineRenderer>();
         Vector3[] Positions = new Vector3[LR.positionCount];
         LR.GetPositions(Positions);
         m_pathPositions = Positions.ToList();
@@ -44,7 +44,7 @@ public class EnemyPathManager : MonoBehaviour
         {
             for (int i = 0; i < EnemiesOnPath.Count; i++)
             {
-                var currentEnemy = EnemiesOnPath[i];
+                Enemy currentEnemy = EnemiesOnPath[i];
                 if (currentEnemy.Object == null)
                 {
                     EnemiesOnPath[i] = null;
@@ -54,7 +54,7 @@ public class EnemyPathManager : MonoBehaviour
                 {
                     currentEnemy.MoveCoef = 0;
                     currentEnemy.CurrentPathIndex++;
-                    if (currentEnemy.CurrentPathIndex+1 >= m_pathPositions.Count)
+                    if (currentEnemy.CurrentPathIndex + 1 >= m_pathPositions.Count)
                     {
                         //inflict damage since enemy arrived at the end of its path
                         GameState.Instance.CurrentHealth -= currentEnemy.Object.MaxHealth;
@@ -64,11 +64,11 @@ public class EnemyPathManager : MonoBehaviour
                         continue;
                     }
                 }
-                var OriginPoint = m_pathPositions[currentEnemy.CurrentPathIndex];
-                var EndPoint = m_pathPositions[currentEnemy.CurrentPathIndex + 1];
+                Vector3 OriginPoint = m_pathPositions[currentEnemy.CurrentPathIndex];
+                Vector3 EndPoint = m_pathPositions[currentEnemy.CurrentPathIndex + 1];
                 currentEnemy.MoveCoef += Time.deltaTime / Vector3.Distance(OriginPoint, EndPoint) * currentEnemy.Object.MovementSpeed;
 
-                var NewPos = Vector3.Lerp(OriginPoint, EndPoint, currentEnemy.MoveCoef);
+                Vector3 NewPos = Vector3.Lerp(OriginPoint, EndPoint, currentEnemy.MoveCoef);
                 NewPos.Set(NewPos.x, currentEnemy.Object.transform.position.y, NewPos.z);
                 currentEnemy.Object.transform.position = NewPos;
             }

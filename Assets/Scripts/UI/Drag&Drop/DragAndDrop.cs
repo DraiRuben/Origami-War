@@ -9,9 +9,9 @@ public class DragAndDrop : MonoBehaviour
     private Vector3 _dragPosition;
     [HideInInspector] public GameObject _dragTower;
     public bool _canDrop;
-    
+
     public static DragAndDrop Instance;
-    
+
     public List<GameObject> _collision = new List<GameObject>();
 
     private void Awake()
@@ -32,18 +32,18 @@ public class DragAndDrop : MonoBehaviour
         if (_dragTower != null)
         {
             _dragTower.transform.position = _dragPosition;
-            HighlightTower(); 
+            HighlightTower();
         }
     }
 
     public void BeginDrag(GameObject newTower)
-    { 
+    {
         CheckObject();
         _dragTower = Instantiate(newTower, _dragPosition, Quaternion.identity);
     }
 
     public void StopDrag()
-    { 
+    {
         _raycast = false;
         _collision.Clear();
         Destroy(_dragTower);
@@ -52,7 +52,7 @@ public class DragAndDrop : MonoBehaviour
     public void Drop()
     {
         _raycast = false;
-        if(_dragTower != null)
+        if (_dragTower != null)
         {
             StartCoroutine(TowerIsPlaced(_dragTower));
             GameState.Instance.Cash -= _dragTower.GetComponent<TowerBehaviour>().Stats.Cost;
@@ -68,19 +68,19 @@ public class DragAndDrop : MonoBehaviour
     private IEnumerator TowerIsPlaced(GameObject tower)
     {
         yield return new WaitForSeconds(0.1f);
-        tower.GetComponent<PlaceTowerInteraction>()._isPlaced = true;
+        tower.GetComponent<PlaceTowerInteraction>().IsPlaced = true;
     }
     private void HighlightTower()
     {
         if (_canDrop)
         {
-            _dragTower.transform.GetChild(0).gameObject.SetActive(true);   
-            _dragTower.transform.GetChild(1).gameObject.SetActive(false);    
+            _dragTower.transform.GetChild(0).gameObject.SetActive(true);
+            _dragTower.transform.GetChild(1).gameObject.SetActive(false);
         }
-        else 
+        else
         {
             _dragTower.transform.GetChild(0).gameObject.SetActive(false);
-            _dragTower.transform.GetChild(1).gameObject.SetActive(true);     
+            _dragTower.transform.GetChild(1).gameObject.SetActive(true);
         }
     }
 
@@ -92,9 +92,9 @@ public class DragAndDrop : MonoBehaviour
 
     private void CheckObject()
     {
-        var ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
+        Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
 
-        Physics.Raycast(ray, out var hit,999999,~LayerMask.GetMask("Tower"));
+        Physics.Raycast(ray, out RaycastHit hit, 999999, ~LayerMask.GetMask("Tower"));
 
         if (hit.collider != null)
         {
@@ -113,6 +113,6 @@ public class DragAndDrop : MonoBehaviour
         {
             _canDrop = false;
         }
-        
+
     }
 }

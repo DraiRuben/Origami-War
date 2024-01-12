@@ -1,8 +1,5 @@
-using System;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class UITower : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
@@ -33,7 +30,7 @@ public class UITower : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     public void SelectTower()
     {
-        if(_canUse)
+        if (_canUse)
             DragAndDrop.Instance.BeginDrag(_tower);
     }
 

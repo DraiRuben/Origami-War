@@ -1,23 +1,16 @@
-using TMPro;
 using UnityEngine;
 
 public class PlaceTowerInteraction : MonoBehaviour
 {
-    public GameObject TowerInformation;
-    public bool _isPlaced;
+    public bool IsPlaced;
 
-    [Header("Texts")] 
-    [SerializeField] private TMP_Text Desc;
-    [SerializeField] private TMP_Text SalesGain;
-    private void OnMouseUp()
+    private void OnMouseDown()
     {
-        if (_isPlaced)
+        if (IsPlaced)
         {
-            TowerInformation.SetActive(true);
-            Desc.SetText(GetComponent<TowerBehaviour>().Stats.Desc);
-            SalesGain.SetText((GetComponent<TowerBehaviour>().Stats.Cost/2).ToString());
+            UITowerInformation.Instance.SetInformations(GetComponent<TowerBehaviour>().Stats);
             transform.GetChild(0).gameObject.SetActive(true);
-            InputManager.Instance.SelectedTower = this.gameObject;
+            InputManager.Instance.SelectedTower = gameObject;
         }
     }
 }

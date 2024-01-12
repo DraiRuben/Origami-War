@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class DragDisable : MonoBehaviour, IPointerEnterHandler ,IPointerExitHandler
+public class DragDisable : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -10,6 +10,6 @@ public class DragDisable : MonoBehaviour, IPointerEnterHandler ,IPointerExitHand
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        DragAndDrop.Instance._raycast = true;     
+        DragAndDrop.Instance._raycast = true;
     }
 }

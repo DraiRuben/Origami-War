@@ -6,11 +6,11 @@ public class CreditsPopup : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     [SerializeField] private GameObject Popup;
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Popup.SetActive(true);   
+        Popup.SetActive(true);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        Popup.SetActive(false);   
+        Popup.SetActive(false);
     }
 }

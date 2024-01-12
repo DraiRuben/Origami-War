@@ -1,5 +1,4 @@
 using Sirenix.OdinInspector;
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -29,7 +28,7 @@ public class TowerBehaviour : MonoBehaviour
     {
         GameState.Instance.Cash += EnemiesInRange[0].RewardMoney;
     }
-    
+
     private IEnumerator ShootRoutine()
     {
         while (true)
@@ -37,11 +36,11 @@ public class TowerBehaviour : MonoBehaviour
             if (GameState.Instance.IsWaveRunning)
             {
                 EnemiesInRange.RemoveAll(x => x == null);
-                if(EnemiesInRange.Count > 0)
+                if (EnemiesInRange.Count > 0)
                 {
                     StartCoroutine(DamageEnemy(EnemiesInRange[0]));
                     if (Stats.AttackOnceEach) EnemiesInRange.RemoveAt(0);
-                    yield return new WaitForSeconds(1f/Stats.FireRate);
+                    yield return new WaitForSeconds(1f / Stats.FireRate);
                 }
 
             }
@@ -68,7 +67,7 @@ public class TowerBehaviour : MonoBehaviour
     private IEnumerator ProjectileShootRoutine(Vector3 Destination)
     {
         float coef = 0;
-        Transform Projectile = Instantiate(Stats.Projectile,transform.position,Quaternion.identity).transform;
+        Transform Projectile = Instantiate(Stats.Projectile, transform.position, Quaternion.identity).transform;
         Vector3 OriginalPos = Projectile.position;
         float Duration = FlatDistance(Destination, transform.position) / Stats.ProjectileSpeed;
         while (coef < 1)
@@ -85,15 +84,15 @@ public class TowerBehaviour : MonoBehaviour
 
     private void PopulateAttackableEnemies()
     {
-        var Paths = GameState.Instance.Paths;
-        for(int i = 0;i<Paths.Count;i++)
+        List<EnemyPathManager> Paths = GameState.Instance.Paths;
+        for (int i = 0; i < Paths.Count; i++)
         {
-            for(int u = 0; u < Paths[i].EnemiesOnPath.Count;u++)
+            for (int u = 0; u < Paths[i].EnemiesOnPath.Count; u++)
             {
-                var Enemy = Paths[i].EnemiesOnPath[u].Object;
-                bool IsAlreadyDetected= EnemiesInRange.Contains(Enemy);
+                EnemyStats Enemy = Paths[i].EnemiesOnPath[u].Object;
+                bool IsAlreadyDetected = EnemiesInRange.Contains(Enemy);
                 //if this is newly detected, add to list of enemies in range
-                if (FlatDistance(Enemy.transform.position,transform.position) < Enemy.DetectionRadius*Enemy.transform.localScale.x + Stats.Range*transform.localScale.x)
+                if (FlatDistance(Enemy.transform.position, transform.position) < Enemy.DetectionRadius * Enemy.transform.localScale.x + Stats.Range * transform.localScale.x)
                 {
                     if (!IsAlreadyDetected)
                     {

@@ -1,9 +1,7 @@
 using Sirenix.OdinInspector;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class GameState : MonoBehaviour
 {
@@ -39,7 +37,7 @@ public class GameState : MonoBehaviour
     {
         Cash -= 5;
     }
-    
+
     //Invoked when the player finishes the current wave and has the auto start next round enabled
     //or if the player clicked on the start next round button with the toggle disabled
     //or at the start of a new game, of course

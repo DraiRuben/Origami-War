@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,7 +9,7 @@ public class ExampleSlider : MonoBehaviour
 
     private Slider slider;
 
-    [Range(0,1)]
+    [Range(0, 1)]
     public float isOn;
 
     private void Awake()

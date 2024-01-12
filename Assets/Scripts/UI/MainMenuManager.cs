@@ -17,14 +17,14 @@ public class MainMenuManager : MonoBehaviour
 
     public void Settings()
     {
-        Animator.SetBool("Settings", true);    
+        Animator.SetBool("Settings", true);
     }
 
     public void Credits()
     {
         Animator.SetBool("Credits", true);
     }
-    
+
     public void Quit()
     {
         Application.Quit();
@@ -37,6 +37,6 @@ public class MainMenuManager : MonoBehaviour
 
     public void CreditsBack()
     {
-        Animator.SetBool("Credits", false);    
+        Animator.SetBool("Credits", false);
     }
 }

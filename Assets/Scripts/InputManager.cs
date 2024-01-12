@@ -1,11 +1,9 @@
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class InputManager : MonoBehaviour
 {
-    [SerializeField] private GameObject TowerInformation;
     public GameObject SelectedTower;
     public bool _HideUI = true;
 
@@ -23,13 +21,17 @@ public class InputManager : MonoBehaviour
     {
         if (context.performed)
         {
-            if(DragAndDrop.Instance._raycast && DragAndDrop.Instance._canDrop)
-                DragAndDrop.Instance.Drop();
-            else if(_HideUI)
+            if (DragAndDrop.Instance._raycast && DragAndDrop.Instance._canDrop)
             {
-                TowerInformation.SetActive(false);
-                if(SelectedTower != null)
+                DragAndDrop.Instance.Drop();
+            }
+            else if (_HideUI)
+            {
+                UITowerInformation.Instance.gameObject.SetActive(false);
+                if (SelectedTower != null)
+                {
                     SelectedTower.transform.GetChild(0).gameObject.SetActive(false);
+                }
                 SelectedTower = null;
             }
         }
@@ -50,16 +52,16 @@ public class InputManager : MonoBehaviour
             {
                 if (DragAndDrop.Instance._dragTower != null)
                     Destroy(DragAndDrop.Instance._dragTower);
-                
+
                 Time.timeScale = 0;
                 UIManager.Instance._pauseButtons.GetComponent<Button>().interactable = false;
                 UIManager.Instance._pauseButtons.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
-            } 
+            }
         }
         else if (context.started && UIManager.Instance._settingsMenu.activeSelf)
         {
-            UIManager.Instance._pauseMenu.SetActive(!UIManager.Instance._pauseMenu.activeSelf);    
-            UIManager.Instance._settingsMenu.SetActive(!UIManager.Instance._settingsMenu.activeSelf);   
+            UIManager.Instance._pauseMenu.SetActive(!UIManager.Instance._pauseMenu.activeSelf);
+            UIManager.Instance._settingsMenu.SetActive(!UIManager.Instance._settingsMenu.activeSelf);
         }
     }
 }

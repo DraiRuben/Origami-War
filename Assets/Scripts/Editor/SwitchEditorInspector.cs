@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using UnityEditor;
+﻿using UnityEditor;
+using UnityEngine;
 using UnityEngine.UI;
 
 [CustomEditor(typeof(Switch))]
@@ -19,7 +19,7 @@ public class SwitchEditorInspector : Editor
     private Vector2? offSwitchIconPos = null;
 
     private Vector2? buttonSizeTmp = null;
-    private float?   buttonStartPosTmp = null;
+    private float? buttonStartPosTmp = null;
     private Vector2? onButtonIconSize = null;
     private Vector2? onButtonIconPos = null;
     private Vector2? offButtonIconSize = null;
@@ -46,7 +46,7 @@ public class SwitchEditorInspector : Editor
     SerializedObject offBackgroundSwitchIconSize;
     SerializedProperty m_OffBackgroundSwitchIcon_SizeDelta;
     SerializedProperty m_OffBackgroundSwitchIcon_Pos;
-    
+
 
     SerializedObject buttonImageAndColor;
     SerializedProperty m_Button_Sprite;
@@ -64,7 +64,7 @@ public class SwitchEditorInspector : Editor
     SerializedObject onButtonIconRect;
     SerializedProperty m_OnButtonIcon_SizeDelta;
     SerializedProperty m_OnButtonIcon_Pos;
-   
+
     SerializedObject offButtonIconImage;
     SerializedProperty m_OffButtonIcon_Sprite;
     SerializedObject offButtonIconRect;
@@ -168,7 +168,7 @@ public class SwitchEditorInspector : Editor
             EditorGUILayout.BeginHorizontal();
             EditorGUILayout.BeginVertical();
             EditorGUILayout.PropertyField(m_BackgroundSize_SizeDelta, new GUIContent("SwitchSize"));
-            EditorGUILayout.Slider(m_BackgroundSize_LocalScale.FindPropertyRelative("x"), 0, 5,new GUIContent("SwitchScale"));
+            EditorGUILayout.Slider(m_BackgroundSize_LocalScale.FindPropertyRelative("x"), 0, 5, new GUIContent("SwitchScale"));
             m_BackgroundSize_LocalScale.vector3Value = new Vector3(m_BackgroundSize_LocalScale.vector3Value.x, m_BackgroundSize_LocalScale.vector3Value.x, m_BackgroundSize_LocalScale.vector3Value.x);
             GUILayout.EndVertical();
 
@@ -231,7 +231,7 @@ public class SwitchEditorInspector : Editor
         }
 
         EditorGUILayout.Space();
-        
+
         if (switchButton = EditorGUILayout.Foldout(switchButton, "SwitchButton"))
         {
             EditorGUI.indentLevel++;
@@ -336,11 +336,11 @@ public class SwitchEditorInspector : Editor
         {
             m_Background_Color.colorValue = m_OnSwitchColor.colorValue;
             m_Button_Color.colorValue = _editor.onSwitchColor;
-            m_Button_Pos.FindPropertyRelative("x").floatValue = m_BackgroundSize_SizeDelta.FindPropertyRelative("x").floatValue - m_Button_StartPos.floatValue;       
+            m_Button_Pos.FindPropertyRelative("x").floatValue = m_BackgroundSize_SizeDelta.FindPropertyRelative("x").floatValue - m_Button_StartPos.floatValue;
         }
 
         else
-        {       
+        {
             m_Background_Color.colorValue = m_OffSwitchColor.colorValue;
             m_Button_Color.colorValue = _editor.offSwitchColor;
             m_Button_Pos.FindPropertyRelative("x").floatValue = m_Button_StartPos.floatValue;
