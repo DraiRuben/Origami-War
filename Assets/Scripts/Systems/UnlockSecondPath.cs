@@ -7,13 +7,17 @@ using UnityEngine;
 public class UnlockSecondPath : MonoBehaviour
 {
     [SerializeField] private GameObject Explosion;
-    [Button]
-    public void DestroyBuilding()
+    [SerializeField] private int TriggerWave;
+    private void Start()
     {
-        if (GameState.Instance.CurrentWave == 0)
+        GameState.Instance.OnWaveChanged += TryDestroyBuilding;
+    }
+    public void TryDestroyBuilding(int NewWave)
+    {
+        if (NewWave == TriggerWave)
         {
-            Instantiate(Explosion, transform.position, quaternion.identity);
-            Destroy(this.gameObject);
+            Instantiate(Explosion, transform.position, Quaternion.identity);
+            Destroy(gameObject);
         }
     }
 }

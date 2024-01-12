@@ -14,16 +14,25 @@ public class WaveTransition : MonoBehaviour
     {
         if (GameState.Instance.CurrentWave < GameState.Instance.LastWave)
         {
+            if (Switch.Instance.isOn)
+            {
+                NextWave();
+                return;
+            }
+            GameState.Instance.IsWaveRunning = false;
             gameObject.SetActive(true);
         }
         else
         {
+            GameState.Instance.IsWaveRunning = false;
             //EndGame.Instance.gameObject.SetActive(true);
         }
     }
     public void NextWave()
     {
         GameState.Instance.CurrentWave++;
+        GameState.Instance.IsWaveRunning = true;
+        UIManager.Instance._currentWave.SetText((GameState.Instance.CurrentWave + 1).ToString());
         gameObject.SetActive(false);
     }
 }

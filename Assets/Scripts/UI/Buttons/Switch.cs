@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class Switch : MonoBehaviour
 {
+    public static Switch Instance;
+
     public RectTransform switchRectTr;
 
     public Image backgrounImageAndColor;
@@ -44,6 +46,9 @@ public class Switch : MonoBehaviour
 
     public void Awake()
     {
+        if (Instance == null) Instance = this;
+        else Destroy(gameObject);
+
         switchRectTr = GetComponent<RectTransform>();
 
         backgrounImageAndColor = GetComponent<Image>();

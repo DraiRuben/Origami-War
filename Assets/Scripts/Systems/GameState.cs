@@ -35,8 +35,7 @@ public class GameState : MonoBehaviour
     private void GoToNextWaveDebug()
     {
         OnWaveChanged.Invoke(CurrentWave);
-        IsWaveRunning = true;
-        UIManager.Instance._currentWave.SetText((CurrentWave+1).ToString());
+        
     }
 
     [Button]

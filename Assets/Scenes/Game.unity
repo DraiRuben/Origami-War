@@ -1004,6 +1004,7 @@ GameObject:
   - component: {fileID: 117793420}
   - component: {fileID: 117793419}
   - component: {fileID: 117793418}
+  - component: {fileID: 117793421}
   m_Layer: 5
   m_Name: Start Wave
   m_TagString: Untagged
@@ -1075,9 +1076,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 921169029}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: Pause
+      - m_Target: {fileID: 117793421}
+        m_TargetAssemblyTypeName: WaveTransition, Assembly-CSharp
+        m_MethodName: NextWave
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1125,6 +1126,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 117793416}
   m_CullTransparentMesh: 1
+--- !u!114 &117793421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117793416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4494de2f9fc816c40b02c75f9db322ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &120012668
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5438,6 +5451,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Explosion: {fileID: 4593184484909914552, guid: 2e1e9506f5904a64b81744324fb7cd50, type: 3}
+  TriggerWave: 20
 --- !u!1001 &718941499
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11505,6 +11519,10 @@ MonoBehaviour:
     - ToSpawn: {fileID: 1675308188217246, guid: 62ae8e86000119d4cb5f57b6baeff572, type: 3}
       Amount: 5
       SpawnWaitTime: 1
+  - ToSpawn:
+    - ToSpawn: {fileID: 1675308188217246, guid: 62ae8e86000119d4cb5f57b6baeff572, type: 3}
+      Amount: 5
+      SpawnWaitTime: 1
   m_pathManager: {fileID: 1076718291}
 --- !u!4 &1325940936
 Transform:
@@ -11843,7 +11861,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d7cc57ac535ef14382a90af1e80343a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentWave: 0
+  _currentWave: -1
   LastWave: 40
   _cash: 300
   CurrentHealth: 0
@@ -16865,6 +16883,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Waves:
+  - ToSpawn: []
   - ToSpawn: []
   m_pathManager: {fileID: 1753510829}
 --- !u!1001 &2037731282
