@@ -20,7 +20,7 @@ public class EnemyStats : MonoBehaviour
 
     private float SlowRemainingDuration;
     private Coroutine m_slowRoutine;
-    public UnityEvent OnEnemyDeath = new();
+    [HideInInspector] public UnityEvent OnEnemyDeath = new();
     private void Awake()
     {
         currentHealth = MaxHealth;

@@ -4153,10 +4153,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 921169028}
     m_Modifications:
-    - target: {fileID: 1636063196975524602, guid: c0f64106344079f4e9e2a533263396d4, type: 3}
-      propertyPath: Unavailable.rgba
-      value: 4278190080
-      objectReference: {fileID: 0}
     - target: {fileID: 4683975390150636639, guid: c0f64106344079f4e9e2a533263396d4, type: 3}
       propertyPath: m_Pivot.x
       value: 1
@@ -4240,18 +4236,6 @@ PrefabInstance:
     - target: {fileID: 5647381516423518283, guid: c0f64106344079f4e9e2a533263396d4, type: 3}
       propertyPath: m_Name
       value: Panel Towers
-      objectReference: {fileID: 0}
-    - target: {fileID: 6693243224606018421, guid: c0f64106344079f4e9e2a533263396d4, type: 3}
-      propertyPath: _tower
-      value: 
-      objectReference: {fileID: 117206, guid: 14f5cbff1077f0b44a4a0a00338ce67a, type: 3}
-    - target: {fileID: 6693243224606018421, guid: c0f64106344079f4e9e2a533263396d4, type: 3}
-      propertyPath: Unavailable.rgba
-      value: 4278190080
-      objectReference: {fileID: 0}
-    - target: {fileID: 8329100416950090841, guid: c0f64106344079f4e9e2a533263396d4, type: 3}
-      propertyPath: Unavailable.rgba
-      value: 4278190080
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11517,12 +11501,245 @@ MonoBehaviour:
   Waves:
   - ToSpawn:
     - ToSpawn: {fileID: 1675308188217246, guid: 62ae8e86000119d4cb5f57b6baeff572, type: 3}
+      Amount: 20
+      SpawnWaitTime: 0.5
+  - ToSpawn:
+    - ToSpawn: {fileID: 1675308188217246, guid: 62ae8e86000119d4cb5f57b6baeff572, type: 3}
+      Amount: 15
+      SpawnWaitTime: 0.5
+    - ToSpawn: {fileID: 1965910811585682, guid: 56399f9e53b07d441ba956f0ceacde13, type: 3}
       Amount: 5
       SpawnWaitTime: 1
   - ToSpawn:
     - ToSpawn: {fileID: 1675308188217246, guid: 62ae8e86000119d4cb5f57b6baeff572, type: 3}
+      Amount: 15
+      SpawnWaitTime: 0.5
+    - ToSpawn: {fileID: 1965910811585682, guid: 56399f9e53b07d441ba956f0ceacde13, type: 3}
       Amount: 5
       SpawnWaitTime: 1
+    - ToSpawn: {fileID: 1675308188217246, guid: 62ae8e86000119d4cb5f57b6baeff572, type: 3}
+      Amount: 20
+      SpawnWaitTime: 0.15
+  - ToSpawn:
+    - ToSpawn: {fileID: 1675308188217246, guid: 62ae8e86000119d4cb5f57b6baeff572, type: 3}
+      Amount: 20
+      SpawnWaitTime: 0.5
+    - ToSpawn: {fileID: 1965910811585682, guid: 56399f9e53b07d441ba956f0ceacde13, type: 3}
+      Amount: 10
+      SpawnWaitTime: 1
+    - ToSpawn: {fileID: 1940725992751248, guid: 347eb69d906e8ac43bf1795f12969bcb, type: 3}
+      Amount: 10
+      SpawnWaitTime: 0.6
+  - ToSpawn:
+    - ToSpawn: {fileID: 1675308188217246, guid: 62ae8e86000119d4cb5f57b6baeff572, type: 3}
+      Amount: 20
+      SpawnWaitTime: 0.5
+    - ToSpawn: {fileID: 1965910811585682, guid: 56399f9e53b07d441ba956f0ceacde13, type: 3}
+      Amount: 10
+      SpawnWaitTime: 1
+    - ToSpawn: {fileID: 1940725992751248, guid: 347eb69d906e8ac43bf1795f12969bcb, type: 3}
+      Amount: 10
+      SpawnWaitTime: 0.6
+    - ToSpawn: {fileID: 1832056105147992, guid: 7a36bd7a6d6c4694a9d42b3c7fad32e4, type: 3}
+      Amount: 1
+      SpawnWaitTime: 0
+  - ToSpawn:
+    - ToSpawn: {fileID: 1675308188217246, guid: 62ae8e86000119d4cb5f57b6baeff572, type: 3}
+      Amount: 20
+      SpawnWaitTime: 0.5
+    - ToSpawn: {fileID: 1965910811585682, guid: 56399f9e53b07d441ba956f0ceacde13, type: 3}
+      Amount: 10
+      SpawnWaitTime: 1
+    - ToSpawn: {fileID: 1940725992751248, guid: 347eb69d906e8ac43bf1795f12969bcb, type: 3}
+      Amount: 10
+      SpawnWaitTime: 0.6
+    - ToSpawn: {fileID: 1832056105147992, guid: 7a36bd7a6d6c4694a9d42b3c7fad32e4, type: 3}
+      Amount: 2
+      SpawnWaitTime: 3
+  - ToSpawn:
+    - ToSpawn: {fileID: 1675308188217246, guid: 62ae8e86000119d4cb5f57b6baeff572, type: 3}
+      Amount: 20
+      SpawnWaitTime: 0.5
+    - ToSpawn: {fileID: 1965910811585682, guid: 56399f9e53b07d441ba956f0ceacde13, type: 3}
+      Amount: 10
+      SpawnWaitTime: 1
+    - ToSpawn: {fileID: 1940725992751248, guid: 347eb69d906e8ac43bf1795f12969bcb, type: 3}
+      Amount: 10
+      SpawnWaitTime: 0.6
+    - ToSpawn: {fileID: 1832056105147992, guid: 7a36bd7a6d6c4694a9d42b3c7fad32e4, type: 3}
+      Amount: 2
+      SpawnWaitTime: 3
+    - ToSpawn: {fileID: 1182029683073452, guid: 2dd667d58afbe9f4c88da1cb46d339e2, type: 3}
+      Amount: 4
+      SpawnWaitTime: 1
+  - ToSpawn:
+    - ToSpawn: {fileID: 1675308188217246, guid: 62ae8e86000119d4cb5f57b6baeff572, type: 3}
+      Amount: 20
+      SpawnWaitTime: 0.5
+    - ToSpawn: {fileID: 1965910811585682, guid: 56399f9e53b07d441ba956f0ceacde13, type: 3}
+      Amount: 10
+      SpawnWaitTime: 1
+    - ToSpawn: {fileID: 1940725992751248, guid: 347eb69d906e8ac43bf1795f12969bcb, type: 3}
+      Amount: 10
+      SpawnWaitTime: 0.6
+    - ToSpawn: {fileID: 1832056105147992, guid: 7a36bd7a6d6c4694a9d42b3c7fad32e4, type: 3}
+      Amount: 2
+      SpawnWaitTime: 3
+    - ToSpawn: {fileID: 1182029683073452, guid: 2dd667d58afbe9f4c88da1cb46d339e2, type: 3}
+      Amount: 4
+      SpawnWaitTime: 1
+  - ToSpawn:
+    - ToSpawn: {fileID: 1675308188217246, guid: 62ae8e86000119d4cb5f57b6baeff572, type: 3}
+      Amount: 20
+      SpawnWaitTime: 0.5
+    - ToSpawn: {fileID: 1965910811585682, guid: 56399f9e53b07d441ba956f0ceacde13, type: 3}
+      Amount: 10
+      SpawnWaitTime: 1
+    - ToSpawn: {fileID: 1940725992751248, guid: 347eb69d906e8ac43bf1795f12969bcb, type: 3}
+      Amount: 10
+      SpawnWaitTime: 0.6
+    - ToSpawn: {fileID: 1832056105147992, guid: 7a36bd7a6d6c4694a9d42b3c7fad32e4, type: 3}
+      Amount: 2
+      SpawnWaitTime: 3
+    - ToSpawn: {fileID: 1182029683073452, guid: 2dd667d58afbe9f4c88da1cb46d339e2, type: 3}
+      Amount: 4
+      SpawnWaitTime: 1
+  - ToSpawn:
+    - ToSpawn: {fileID: 1675308188217246, guid: 62ae8e86000119d4cb5f57b6baeff572, type: 3}
+      Amount: 20
+      SpawnWaitTime: 0.5
+    - ToSpawn: {fileID: 1965910811585682, guid: 56399f9e53b07d441ba956f0ceacde13, type: 3}
+      Amount: 10
+      SpawnWaitTime: 1
+    - ToSpawn: {fileID: 1940725992751248, guid: 347eb69d906e8ac43bf1795f12969bcb, type: 3}
+      Amount: 10
+      SpawnWaitTime: 0.6
+    - ToSpawn: {fileID: 1832056105147992, guid: 7a36bd7a6d6c4694a9d42b3c7fad32e4, type: 3}
+      Amount: 2
+      SpawnWaitTime: 3
+  - ToSpawn:
+    - ToSpawn: {fileID: 1675308188217246, guid: 62ae8e86000119d4cb5f57b6baeff572, type: 3}
+      Amount: 20
+      SpawnWaitTime: 0.5
+    - ToSpawn: {fileID: 1965910811585682, guid: 56399f9e53b07d441ba956f0ceacde13, type: 3}
+      Amount: 10
+      SpawnWaitTime: 1
+    - ToSpawn: {fileID: 1940725992751248, guid: 347eb69d906e8ac43bf1795f12969bcb, type: 3}
+      Amount: 10
+      SpawnWaitTime: 0.6
+    - ToSpawn: {fileID: 1832056105147992, guid: 7a36bd7a6d6c4694a9d42b3c7fad32e4, type: 3}
+      Amount: 2
+      SpawnWaitTime: 3
+  - ToSpawn:
+    - ToSpawn: {fileID: 1965910811585682, guid: 56399f9e53b07d441ba956f0ceacde13, type: 3}
+      Amount: 20
+      SpawnWaitTime: 0.5
+    - ToSpawn: {fileID: 1940725992751248, guid: 347eb69d906e8ac43bf1795f12969bcb, type: 3}
+      Amount: 10
+      SpawnWaitTime: 0.6
+    - ToSpawn: {fileID: 1832056105147992, guid: 7a36bd7a6d6c4694a9d42b3c7fad32e4, type: 3}
+      Amount: 2
+      SpawnWaitTime: 3
+  - ToSpawn:
+    - ToSpawn: {fileID: 1965910811585682, guid: 56399f9e53b07d441ba956f0ceacde13, type: 3}
+      Amount: 20
+      SpawnWaitTime: 0.5
+    - ToSpawn: {fileID: 1940725992751248, guid: 347eb69d906e8ac43bf1795f12969bcb, type: 3}
+      Amount: 5
+      SpawnWaitTime: 0.6
+    - ToSpawn: {fileID: 1832056105147992, guid: 7a36bd7a6d6c4694a9d42b3c7fad32e4, type: 3}
+      Amount: 4
+      SpawnWaitTime: 3
+  - ToSpawn:
+    - ToSpawn: {fileID: 1965910811585682, guid: 56399f9e53b07d441ba956f0ceacde13, type: 3}
+      Amount: 20
+      SpawnWaitTime: 0.5
+    - ToSpawn: {fileID: 1940725992751248, guid: 347eb69d906e8ac43bf1795f12969bcb, type: 3}
+      Amount: 5
+      SpawnWaitTime: 0.6
+    - ToSpawn: {fileID: 1832056105147992, guid: 7a36bd7a6d6c4694a9d42b3c7fad32e4, type: 3}
+      Amount: 4
+      SpawnWaitTime: 3
+  - ToSpawn:
+    - ToSpawn: {fileID: 1965910811585682, guid: 56399f9e53b07d441ba956f0ceacde13, type: 3}
+      Amount: 5
+      SpawnWaitTime: 0.5
+    - ToSpawn: {fileID: 1940725992751248, guid: 347eb69d906e8ac43bf1795f12969bcb, type: 3}
+      Amount: 13
+      SpawnWaitTime: 0.6
+    - ToSpawn: {fileID: 1832056105147992, guid: 7a36bd7a6d6c4694a9d42b3c7fad32e4, type: 3}
+      Amount: 4
+      SpawnWaitTime: 3
+  - ToSpawn:
+    - ToSpawn: {fileID: 1965910811585682, guid: 56399f9e53b07d441ba956f0ceacde13, type: 3}
+      Amount: 5
+      SpawnWaitTime: 0.5
+    - ToSpawn: {fileID: 1940725992751248, guid: 347eb69d906e8ac43bf1795f12969bcb, type: 3}
+      Amount: 13
+      SpawnWaitTime: 0.6
+    - ToSpawn: {fileID: 1832056105147992, guid: 7a36bd7a6d6c4694a9d42b3c7fad32e4, type: 3}
+      Amount: 4
+      SpawnWaitTime: 3
+  - ToSpawn:
+    - ToSpawn: {fileID: 1965910811585682, guid: 56399f9e53b07d441ba956f0ceacde13, type: 3}
+      Amount: 5
+      SpawnWaitTime: 0.5
+    - ToSpawn: {fileID: 1940725992751248, guid: 347eb69d906e8ac43bf1795f12969bcb, type: 3}
+      Amount: 13
+      SpawnWaitTime: 0.6
+    - ToSpawn: {fileID: 1832056105147992, guid: 7a36bd7a6d6c4694a9d42b3c7fad32e4, type: 3}
+      Amount: 4
+      SpawnWaitTime: 3
+  - ToSpawn:
+    - ToSpawn: {fileID: 1965910811585682, guid: 56399f9e53b07d441ba956f0ceacde13, type: 3}
+      Amount: 5
+      SpawnWaitTime: 0.5
+    - ToSpawn: {fileID: 1940725992751248, guid: 347eb69d906e8ac43bf1795f12969bcb, type: 3}
+      Amount: 13
+      SpawnWaitTime: 0.6
+    - ToSpawn: {fileID: 1832056105147992, guid: 7a36bd7a6d6c4694a9d42b3c7fad32e4, type: 3}
+      Amount: 4
+      SpawnWaitTime: 3
+    - ToSpawn: {fileID: 1180148154098208, guid: 1e1964f40b8ea2c45b9417b207663836, type: 3}
+      Amount: 1
+      SpawnWaitTime: 0
+  - ToSpawn:
+    - ToSpawn: {fileID: 1180148154098208, guid: 1e1964f40b8ea2c45b9417b207663836, type: 3}
+      Amount: 3
+      SpawnWaitTime: 5
+  - ToSpawn:
+    - ToSpawn: {fileID: 1180148154098208, guid: 1e1964f40b8ea2c45b9417b207663836, type: 3}
+      Amount: 1
+      SpawnWaitTime: 0.5
+    - ToSpawn: {fileID: 1940725992751248, guid: 347eb69d906e8ac43bf1795f12969bcb, type: 3}
+      Amount: 10
+      SpawnWaitTime: 0.5
+    - ToSpawn: {fileID: 1832056105147992, guid: 7a36bd7a6d6c4694a9d42b3c7fad32e4, type: 3}
+      Amount: 2
+      SpawnWaitTime: 1
+    - ToSpawn: {fileID: 1832056105147992, guid: 7a36bd7a6d6c4694a9d42b3c7fad32e4, type: 3}
+      Amount: 3
+      SpawnWaitTime: 1.2
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
   m_pathManager: {fileID: 1076718291}
 --- !u!4 &1325940936
 Transform:
@@ -11863,7 +12080,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _currentWave: -1
   LastWave: 40
-  _cash: 300
+  _cash: 5000
   CurrentHealth: 0
   InitialHealth: 100
   IsWaveRunning: 0
@@ -16885,6 +17102,128 @@ MonoBehaviour:
   Waves:
   - ToSpawn: []
   - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn:
+    - ToSpawn: {fileID: 1832056105147992, guid: 7a36bd7a6d6c4694a9d42b3c7fad32e4, type: 3}
+      Amount: 5
+      SpawnWaitTime: 0.5
+    - ToSpawn: {fileID: 1832056105147992, guid: 7a36bd7a6d6c4694a9d42b3c7fad32e4, type: 3}
+      Amount: 13
+      SpawnWaitTime: 0.6
+  - ToSpawn:
+    - ToSpawn: {fileID: 1965910811585682, guid: 56399f9e53b07d441ba956f0ceacde13, type: 3}
+      Amount: 5
+      SpawnWaitTime: 0.5
+    - ToSpawn: {fileID: 1832056105147992, guid: 7a36bd7a6d6c4694a9d42b3c7fad32e4, type: 3}
+      Amount: 13
+      SpawnWaitTime: 0.6
+    - ToSpawn: {fileID: 1543346588463464, guid: b44fb43890b183b4a9ad0e6f5d9a070a, type: 3}
+      Amount: 5
+      SpawnWaitTime: 1
+  - ToSpawn:
+    - ToSpawn: {fileID: 1543346588463464, guid: b44fb43890b183b4a9ad0e6f5d9a070a, type: 3}
+      Amount: 5
+      SpawnWaitTime: 1
+    - ToSpawn: {fileID: 1832056105147992, guid: 7a36bd7a6d6c4694a9d42b3c7fad32e4, type: 3}
+      Amount: 13
+      SpawnWaitTime: 0.6
+    - ToSpawn: {fileID: 1965910811585682, guid: 56399f9e53b07d441ba956f0ceacde13, type: 3}
+      Amount: 5
+      SpawnWaitTime: 0.5
+    - ToSpawn: {fileID: 1180148154098208, guid: 1e1964f40b8ea2c45b9417b207663836, type: 3}
+      Amount: 1
+      SpawnWaitTime: 0
+  - ToSpawn:
+    - ToSpawn: {fileID: 1543346588463464, guid: b44fb43890b183b4a9ad0e6f5d9a070a, type: 3}
+      Amount: 5
+      SpawnWaitTime: 1
+    - ToSpawn: {fileID: 1832056105147992, guid: 7a36bd7a6d6c4694a9d42b3c7fad32e4, type: 3}
+      Amount: 13
+      SpawnWaitTime: 0.6
+    - ToSpawn: {fileID: 1965910811585682, guid: 56399f9e53b07d441ba956f0ceacde13, type: 3}
+      Amount: 5
+      SpawnWaitTime: 0.5
+    - ToSpawn: {fileID: 1180148154098208, guid: 1e1964f40b8ea2c45b9417b207663836, type: 3}
+      Amount: 2
+      SpawnWaitTime: 3
+  - ToSpawn:
+    - ToSpawn: {fileID: 1180148154098208, guid: 1e1964f40b8ea2c45b9417b207663836, type: 3}
+      Amount: 5
+      SpawnWaitTime: 2
+  - ToSpawn:
+    - ToSpawn: {fileID: 1543346588463464, guid: b44fb43890b183b4a9ad0e6f5d9a070a, type: 3}
+      Amount: 5
+      SpawnWaitTime: 1
+    - ToSpawn: {fileID: 1832056105147992, guid: 7a36bd7a6d6c4694a9d42b3c7fad32e4, type: 3}
+      Amount: 13
+      SpawnWaitTime: 0.6
+    - ToSpawn: {fileID: 1965910811585682, guid: 56399f9e53b07d441ba956f0ceacde13, type: 3}
+      Amount: 5
+      SpawnWaitTime: 0.5
+    - ToSpawn: {fileID: 1180148154098208, guid: 1e1964f40b8ea2c45b9417b207663836, type: 3}
+      Amount: 2
+      SpawnWaitTime: 3
+  - ToSpawn:
+    - ToSpawn: {fileID: 1180148154098208, guid: 1e1964f40b8ea2c45b9417b207663836, type: 3}
+      Amount: 2
+      SpawnWaitTime: 3
+    - ToSpawn: {fileID: 1965910811585682, guid: 56399f9e53b07d441ba956f0ceacde13, type: 3}
+      Amount: 5
+      SpawnWaitTime: 0.5
+    - ToSpawn: {fileID: 1543346588463464, guid: b44fb43890b183b4a9ad0e6f5d9a070a, type: 3}
+      Amount: 5
+      SpawnWaitTime: 1
+    - ToSpawn: {fileID: 1832056105147992, guid: 7a36bd7a6d6c4694a9d42b3c7fad32e4, type: 3}
+      Amount: 13
+      SpawnWaitTime: 0.6
+    - ToSpawn: {fileID: 1180148154098208, guid: 1e1964f40b8ea2c45b9417b207663836, type: 3}
+      Amount: 2
+      SpawnWaitTime: 3
+  - ToSpawn:
+    - ToSpawn: {fileID: 1180148154098208, guid: 1e1964f40b8ea2c45b9417b207663836, type: 3}
+      Amount: 2
+      SpawnWaitTime: 3
+    - ToSpawn: {fileID: 1965910811585682, guid: 56399f9e53b07d441ba956f0ceacde13, type: 3}
+      Amount: 5
+      SpawnWaitTime: 0.5
+    - ToSpawn: {fileID: 1543346588463464, guid: b44fb43890b183b4a9ad0e6f5d9a070a, type: 3}
+      Amount: 5
+      SpawnWaitTime: 1
+    - ToSpawn: {fileID: 1832056105147992, guid: 7a36bd7a6d6c4694a9d42b3c7fad32e4, type: 3}
+      Amount: 13
+      SpawnWaitTime: 0.6
+    - ToSpawn: {fileID: 1180148154098208, guid: 1e1964f40b8ea2c45b9417b207663836, type: 3}
+      Amount: 2
+      SpawnWaitTime: 3
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
   m_pathManager: {fileID: 1753510829}
 --- !u!1001 &2037731282
 PrefabInstance:
@@ -18413,11 +18752,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6293138567522274217, guid: ffb211171da0366418f6752f6e607a77, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7720919159183603081, guid: ffb211171da0366418f6752f6e607a77, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8003746436925269869, guid: ffb211171da0366418f6752f6e607a77, type: 3}
       propertyPath: m_Name
@@ -18425,7 +18764,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8003746436925269869, guid: ffb211171da0366418f6752f6e607a77, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Switch : MonoBehaviour
@@ -66,12 +67,21 @@ public class Switch : MonoBehaviour
         offSwitchButtonIcon = button.GetChild(1).GetComponent<Image>();
         onSwitchButtonIconSize = onSwitchButtonIcon.GetComponent<RectTransform>();
         offSwitchButtonIconSize = offSwitchButtonIcon.GetComponent<RectTransform>();
+        
     }
-
+    private void Start()
+    {
+        if (PlayerPrefs.GetInt("AutoWave") == 1)
+        {
+            OnClickSwitch();
+        }
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+            transform.parent.parent.parent.gameObject.SetActive(false);
+    }
     public void OnClickSwitch()
     {
         isOn = !isOn;
-
+        PlayerPrefs.SetInt("AutoWave", isOn ? 1 : 0);
         if (backgroundIconUse)
         {
             if (onBackgroundSwitchIcon.sprite != null) onBackgroundSwitchIcon.gameObject.SetActive(true);
@@ -142,6 +152,8 @@ public class Switch : MonoBehaviour
             currentTime += Time.unscaledDeltaTime;
             yield return null;
         }
+        Vector2 newPosition2 = Vector2.Lerp(fromPosition, toPosition, 1);
+        button.anchoredPosition = newPosition2;
         try
         {
             switchIsOn(isOn);
