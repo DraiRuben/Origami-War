@@ -31,6 +31,7 @@ public class InputManager : MonoBehaviour
                 if (SelectedTower != null)
                 {
                     SelectedTower.transform.GetChild(0).gameObject.SetActive(false);
+                    SelectedTower.transform.GetChild(2).gameObject.SetActive(false);
                 }
                 SelectedTower = null;
             }
@@ -62,6 +63,14 @@ public class InputManager : MonoBehaviour
                 
                 UIManager.Instance._starWaveButton.GetComponent<Button>().interactable = false;
                 UIManager.Instance._starWaveButton.GetComponent<Image>().color = Color.white;
+                
+                UITowerInformation.Instance.gameObject.SetActive(false);
+                if (SelectedTower != null)
+                {
+                    SelectedTower.transform.GetChild(0).gameObject.SetActive(false);
+                    SelectedTower.transform.GetChild(2).gameObject.SetActive(false);
+                }
+                SelectedTower = null;
             }
         }
         else if (context.started && UIManager.Instance._settingsMenu.activeSelf)
