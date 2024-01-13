@@ -4153,6 +4153,46 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 921169028}
     m_Modifications:
+    - target: {fileID: 1488609442353078168, guid: c0f64106344079f4e9e2a533263396d4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9138c496a639489449834a09c8a58e12, type: 3}
+    - target: {fileID: 1488609442353078168, guid: c0f64106344079f4e9e2a533263396d4, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1488609442353078168, guid: c0f64106344079f4e9e2a533263396d4, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1488609442353078168, guid: c0f64106344079f4e9e2a533263396d4, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1636063196975524602, guid: c0f64106344079f4e9e2a533263396d4, type: 3}
+      propertyPath: Available.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1636063196975524602, guid: c0f64106344079f4e9e2a533263396d4, type: 3}
+      propertyPath: Unavailable.rgba
+      value: 2523095907
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223592174304930174, guid: c0f64106344079f4e9e2a533263396d4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 04fb383c185ccf44ab61a235753f1226, type: 3}
+    - target: {fileID: 4223592174304930174, guid: c0f64106344079f4e9e2a533263396d4, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223592174304930174, guid: c0f64106344079f4e9e2a533263396d4, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223592174304930174, guid: c0f64106344079f4e9e2a533263396d4, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4683975390150636639, guid: c0f64106344079f4e9e2a533263396d4, type: 3}
       propertyPath: m_Pivot.x
       value: 1
@@ -4233,9 +4273,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4772955722122464203, guid: c0f64106344079f4e9e2a533263396d4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b0de146e6865b4d4e8ebfa964cede9d9, type: 3}
+    - target: {fileID: 4772955722122464203, guid: c0f64106344079f4e9e2a533263396d4, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772955722122464203, guid: c0f64106344079f4e9e2a533263396d4, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772955722122464203, guid: c0f64106344079f4e9e2a533263396d4, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5647381516423518283, guid: c0f64106344079f4e9e2a533263396d4, type: 3}
       propertyPath: m_Name
       value: Panel Towers
+      objectReference: {fileID: 0}
+    - target: {fileID: 6693243224606018421, guid: c0f64106344079f4e9e2a533263396d4, type: 3}
+      propertyPath: Available.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 6693243224606018421, guid: c0f64106344079f4e9e2a533263396d4, type: 3}
+      propertyPath: Unavailable.rgba
+      value: 2523095907
+      objectReference: {fileID: 0}
+    - target: {fileID: 8329100416950090841, guid: c0f64106344079f4e9e2a533263396d4, type: 3}
+      propertyPath: Available.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8329100416950090841, guid: c0f64106344079f4e9e2a533263396d4, type: 3}
+      propertyPath: Unavailable.rgba
+      value: 2523095907
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12080,7 +12152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _currentWave: -1
   LastWave: 40
-  _cash: 5000
+  _cash: 300
   CurrentHealth: 0
   InitialHealth: 100
   IsWaveRunning: 0
