@@ -59,7 +59,8 @@ public class EnemyPathManager : MonoBehaviour
                         //inflict damage since enemy arrived at the end of its path
                         GameState.Instance.CurrentHealth -= currentEnemy.Object.MaxHealth;
                         UIManager.Instance._life.SetText(GameState.Instance.CurrentHealth.ToString());
-                        Destroy(currentEnemy.Object.gameObject);
+                        Endgame.Instance.GameOver();
+                        currentEnemy.Object.CurrentHealth = 0;
                         EnemiesOnPath[i] = null;
                         continue;
                     }

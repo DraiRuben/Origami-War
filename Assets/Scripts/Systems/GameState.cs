@@ -25,7 +25,9 @@ public class GameState : MonoBehaviour
 
     public event Action<int> OnMoneyChanged;
 
-    public int CurrentHealth;
+    [SerializeField] private int _currentHealth;
+    public int CurrentHealth { get { return _currentHealth; } set { _currentHealth = value; OnHealthChanged?.Invoke(value); } }
+    public event Action<int> OnHealthChanged;
     public int InitialHealth;
     public bool IsWaveRunning;
 
@@ -35,7 +37,6 @@ public class GameState : MonoBehaviour
     private void GoToNextWaveDebug()
     {
         OnWaveChanged.Invoke(CurrentWave);
-        
     }
 
     [Button]

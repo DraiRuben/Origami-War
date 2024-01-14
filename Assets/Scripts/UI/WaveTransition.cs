@@ -12,7 +12,7 @@ public class WaveTransition : MonoBehaviour
     }
     public void EndWave()
     {
-        if (GameState.Instance.CurrentWave < GameState.Instance.LastWave)
+        if (GameState.Instance.CurrentWave < GameState.Instance.LastWave - 1)
         {
             if (Switch.Instance.isOn)
             {
@@ -25,7 +25,7 @@ public class WaveTransition : MonoBehaviour
         else
         {
             GameState.Instance.IsWaveRunning = false;
-            //EndGame.Instance.gameObject.SetActive(true);
+            Endgame.Instance.Win();
         }
     }
     public void NextWave()
