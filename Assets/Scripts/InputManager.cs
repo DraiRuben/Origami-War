@@ -19,18 +19,22 @@ public class InputManager : MonoBehaviour
 
     public void Drop(InputAction.CallbackContext context)
     {
-        if (DragAndDrop.Instance._raycast && DragAndDrop.Instance._canDrop)
+        if (context.performed)
         {
-            DragAndDrop.Instance.Drop();
-        }
-        else if (_HideUI)
-        {
-            UITowerInformation.Instance.gameObject.SetActive(false);
-            if (SelectedTower != null)
+            if (DragAndDrop.Instance._raycast && DragAndDrop.Instance._canDrop)
             {
-                SelectedTower.transform.GetChild(0).gameObject.SetActive(false);
+                DragAndDrop.Instance.Drop();
             }
-            SelectedTower = null;
+            else if (_HideUI)
+            {
+                UITowerInformation.Instance.gameObject.SetActive(false);
+                if (SelectedTower != null)
+                {
+                    SelectedTower.transform.GetChild(0).gameObject.SetActive(false);
+                    SelectedTower.transform.GetChild(2).gameObject.SetActive(false);
+                }
+                SelectedTower = null;
+            }
         }
     }
 
@@ -59,6 +63,14 @@ public class InputManager : MonoBehaviour
                 
                 UIManager.Instance._starWaveButton.GetComponent<Button>().interactable = false;
                 UIManager.Instance._starWaveButton.GetComponent<Image>().color = Color.white;
+                
+                UITowerInformation.Instance.gameObject.SetActive(false);
+                if (SelectedTower != null)
+                {
+                    SelectedTower.transform.GetChild(0).gameObject.SetActive(false);
+                    SelectedTower.transform.GetChild(2).gameObject.SetActive(false);
+                }
+                SelectedTower = null;
             }
         }
         else if (context.started && UIManager.Instance._settingsMenu.activeSelf)

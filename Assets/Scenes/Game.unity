@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &17108108 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6453563054004309459, guid: f34af640513dbe8478c698273ce5ba57, type: 3}
-  m_PrefabInstance: {fileID: 1464342905419825003}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &36696792
 GameObject:
   m_ObjectHideFlags: 0
@@ -1919,17 +1914,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4307906653718738, guid: e32aaa936bc750a46baf1468a7e955a4, type: 3}
   m_PrefabInstance: {fileID: 202653200}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &218253348 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5642629959393780219, guid: f34af640513dbe8478c698273ce5ba57, type: 3}
-  m_PrefabInstance: {fileID: 1464342905419825003}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &221872892
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4169,6 +4153,46 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 921169028}
     m_Modifications:
+    - target: {fileID: 1488609442353078168, guid: c0f64106344079f4e9e2a533263396d4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9138c496a639489449834a09c8a58e12, type: 3}
+    - target: {fileID: 1488609442353078168, guid: c0f64106344079f4e9e2a533263396d4, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1488609442353078168, guid: c0f64106344079f4e9e2a533263396d4, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1488609442353078168, guid: c0f64106344079f4e9e2a533263396d4, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1636063196975524602, guid: c0f64106344079f4e9e2a533263396d4, type: 3}
+      propertyPath: Available.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1636063196975524602, guid: c0f64106344079f4e9e2a533263396d4, type: 3}
+      propertyPath: Unavailable.rgba
+      value: 2523095907
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223592174304930174, guid: c0f64106344079f4e9e2a533263396d4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 04fb383c185ccf44ab61a235753f1226, type: 3}
+    - target: {fileID: 4223592174304930174, guid: c0f64106344079f4e9e2a533263396d4, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223592174304930174, guid: c0f64106344079f4e9e2a533263396d4, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223592174304930174, guid: c0f64106344079f4e9e2a533263396d4, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4683975390150636639, guid: c0f64106344079f4e9e2a533263396d4, type: 3}
       propertyPath: m_Pivot.x
       value: 1
@@ -4249,9 +4273,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4772955722122464203, guid: c0f64106344079f4e9e2a533263396d4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b0de146e6865b4d4e8ebfa964cede9d9, type: 3}
+    - target: {fileID: 4772955722122464203, guid: c0f64106344079f4e9e2a533263396d4, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772955722122464203, guid: c0f64106344079f4e9e2a533263396d4, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772955722122464203, guid: c0f64106344079f4e9e2a533263396d4, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5647381516423518283, guid: c0f64106344079f4e9e2a533263396d4, type: 3}
       propertyPath: m_Name
       value: Panel Towers
+      objectReference: {fileID: 0}
+    - target: {fileID: 6693243224606018421, guid: c0f64106344079f4e9e2a533263396d4, type: 3}
+      propertyPath: Available.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 6693243224606018421, guid: c0f64106344079f4e9e2a533263396d4, type: 3}
+      propertyPath: Unavailable.rgba
+      value: 2523095907
+      objectReference: {fileID: 0}
+    - target: {fileID: 8329100416950090841, guid: c0f64106344079f4e9e2a533263396d4, type: 3}
+      propertyPath: Available.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8329100416950090841, guid: c0f64106344079f4e9e2a533263396d4, type: 3}
+      propertyPath: Unavailable.rgba
+      value: 2523095907
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4739,17 +4795,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4274984841250312, guid: d6cda6cdccb84b3439d791e01c71339a, type: 3}
   m_PrefabInstance: {fileID: 607049177}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &610282969 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1382595870218908838, guid: f34af640513dbe8478c698273ce5ba57, type: 3}
-  m_PrefabInstance: {fileID: 1464342905419825003}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &611519781
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7832,7 +7877,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 51
+    m_Bits: 55
 --- !u!114 &921169026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7891,6 +7936,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 698467740}
   - {fileID: 117793417}
   - {fileID: 956331134}
   - {fileID: 509662961}
@@ -7900,7 +7946,6 @@ RectTransform:
   - {fileID: 674241929}
   - {fileID: 7527837075329840517}
   - {fileID: 3034584898093219300}
-  - {fileID: 698467740}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -11757,127 +11802,16 @@ MonoBehaviour:
   - ToSpawn: []
   - ToSpawn: []
   - ToSpawn: []
-  - ToSpawn:
-    - ToSpawn: {fileID: 1180148154098208, guid: 1e1964f40b8ea2c45b9417b207663836, type: 3}
-      Amount: 2
-      SpawnWaitTime: 3
-    - ToSpawn: {fileID: 1965910811585682, guid: 56399f9e53b07d441ba956f0ceacde13, type: 3}
-      Amount: 5
-      SpawnWaitTime: 0.5
-    - ToSpawn: {fileID: 1543346588463464, guid: b44fb43890b183b4a9ad0e6f5d9a070a, type: 3}
-      Amount: 5
-      SpawnWaitTime: 1
-    - ToSpawn: {fileID: 1832056105147992, guid: 7a36bd7a6d6c4694a9d42b3c7fad32e4, type: 3}
-      Amount: 13
-      SpawnWaitTime: 0.6
-    - ToSpawn: {fileID: 1180148154098208, guid: 1e1964f40b8ea2c45b9417b207663836, type: 3}
-      Amount: 2
-      SpawnWaitTime: 3
-  - ToSpawn: []
-  - ToSpawn:
-    - ToSpawn: {fileID: 1182029683073452, guid: 2dd667d58afbe9f4c88da1cb46d339e2, type: 3}
-      Amount: 2
-      SpawnWaitTime: 3
-    - ToSpawn: {fileID: 1965910811585682, guid: 56399f9e53b07d441ba956f0ceacde13, type: 3}
-      Amount: 5
-      SpawnWaitTime: 0.5
-    - ToSpawn: {fileID: 1543346588463464, guid: b44fb43890b183b4a9ad0e6f5d9a070a, type: 3}
-      Amount: 5
-      SpawnWaitTime: 1
-    - ToSpawn: {fileID: 1832056105147992, guid: 7a36bd7a6d6c4694a9d42b3c7fad32e4, type: 3}
-      Amount: 13
-      SpawnWaitTime: 0.6
-    - ToSpawn: {fileID: 1180148154098208, guid: 1e1964f40b8ea2c45b9417b207663836, type: 3}
-      Amount: 2
-      SpawnWaitTime: 3
   - ToSpawn: []
   - ToSpawn: []
-  - ToSpawn:
-    - ToSpawn: {fileID: 1965910811585682, guid: 56399f9e53b07d441ba956f0ceacde13, type: 3}
-      Amount: 5
-      SpawnWaitTime: 0.5
-    - ToSpawn: {fileID: 1182029683073452, guid: 2dd667d58afbe9f4c88da1cb46d339e2, type: 3}
-      Amount: 2
-      SpawnWaitTime: 3
-    - ToSpawn: {fileID: 1543346588463464, guid: b44fb43890b183b4a9ad0e6f5d9a070a, type: 3}
-      Amount: 5
-      SpawnWaitTime: 1
-    - ToSpawn: {fileID: 1832056105147992, guid: 7a36bd7a6d6c4694a9d42b3c7fad32e4, type: 3}
-      Amount: 13
-      SpawnWaitTime: 0.6
-    - ToSpawn: {fileID: 1832056105147992, guid: 7a36bd7a6d6c4694a9d42b3c7fad32e4, type: 3}
-      Amount: 5
-      SpawnWaitTime: 1.5
-  - ToSpawn:
-    - ToSpawn: {fileID: 1965910811585682, guid: 56399f9e53b07d441ba956f0ceacde13, type: 3}
-      Amount: 5
-      SpawnWaitTime: 0.5
-    - ToSpawn: {fileID: 1182029683073452, guid: 2dd667d58afbe9f4c88da1cb46d339e2, type: 3}
-      Amount: 2
-      SpawnWaitTime: 3
-    - ToSpawn: {fileID: 1543346588463464, guid: b44fb43890b183b4a9ad0e6f5d9a070a, type: 3}
-      Amount: 5
-      SpawnWaitTime: 1
-    - ToSpawn: {fileID: 1832056105147992, guid: 7a36bd7a6d6c4694a9d42b3c7fad32e4, type: 3}
-      Amount: 13
-      SpawnWaitTime: 0.6
-    - ToSpawn: {fileID: 1832056105147992, guid: 7a36bd7a6d6c4694a9d42b3c7fad32e4, type: 3}
-      Amount: 5
-      SpawnWaitTime: 1.5
-  - ToSpawn:
-    - ToSpawn: {fileID: 1182029683073452, guid: 2dd667d58afbe9f4c88da1cb46d339e2, type: 3}
-      Amount: 2
-      SpawnWaitTime: 3
-    - ToSpawn: {fileID: 1543346588463464, guid: b44fb43890b183b4a9ad0e6f5d9a070a, type: 3}
-      Amount: 5
-      SpawnWaitTime: 1
-    - ToSpawn: {fileID: 1675308188217246, guid: 62ae8e86000119d4cb5f57b6baeff572, type: 3}
-      Amount: 5
-      SpawnWaitTime: 0.5
-    - ToSpawn: {fileID: 1832056105147992, guid: 7a36bd7a6d6c4694a9d42b3c7fad32e4, type: 3}
-      Amount: 13
-      SpawnWaitTime: 0.6
-    - ToSpawn: {fileID: 1832056105147992, guid: 7a36bd7a6d6c4694a9d42b3c7fad32e4, type: 3}
-      Amount: 5
-      SpawnWaitTime: 1.5
-  - ToSpawn:
-    - ToSpawn: {fileID: 1182029683073452, guid: 2dd667d58afbe9f4c88da1cb46d339e2, type: 3}
-      Amount: 2
-      SpawnWaitTime: 3
-    - ToSpawn: {fileID: 1543346588463464, guid: b44fb43890b183b4a9ad0e6f5d9a070a, type: 3}
-      Amount: 5
-      SpawnWaitTime: 1
-    - ToSpawn: {fileID: 1675308188217246, guid: 62ae8e86000119d4cb5f57b6baeff572, type: 3}
-      Amount: 5
-      SpawnWaitTime: 0.5
-    - ToSpawn: {fileID: 1832056105147992, guid: 7a36bd7a6d6c4694a9d42b3c7fad32e4, type: 3}
-      Amount: 13
-      SpawnWaitTime: 0.6
-    - ToSpawn: {fileID: 1180148154098208, guid: 1e1964f40b8ea2c45b9417b207663836, type: 3}
-      Amount: 1
-      SpawnWaitTime: 1.5
-  - ToSpawn:
-    - ToSpawn: {fileID: 1675308188217246, guid: 62ae8e86000119d4cb5f57b6baeff572, type: 3}
-      Amount: 20
-      SpawnWaitTime: 0.5
-    - ToSpawn: {fileID: 1940725992751248, guid: 347eb69d906e8ac43bf1795f12969bcb, type: 3}
-      Amount: 15
-      SpawnWaitTime: 0.7
-    - ToSpawn: {fileID: 1965910811585682, guid: 56399f9e53b07d441ba956f0ceacde13, type: 3}
-      Amount: 10
-      SpawnWaitTime: 0.85
-    - ToSpawn: {fileID: 1543346588463464, guid: b44fb43890b183b4a9ad0e6f5d9a070a, type: 3}
-      Amount: 8
-      SpawnWaitTime: 1
-    - ToSpawn: {fileID: 1832056105147992, guid: 7a36bd7a6d6c4694a9d42b3c7fad32e4, type: 3}
-      Amount: 5
-      SpawnWaitTime: 1
-    - ToSpawn: {fileID: 1182029683073452, guid: 2dd667d58afbe9f4c88da1cb46d339e2, type: 3}
-      Amount: 6
-      SpawnWaitTime: 0.9
-    - ToSpawn: {fileID: 1180148154098208, guid: 1e1964f40b8ea2c45b9417b207663836, type: 3}
-      Amount: 3
-      SpawnWaitTime: 4
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
   m_pathManager: {fileID: 1076718291}
 --- !u!4 &1325940936
 Transform:
@@ -12219,7 +12153,7 @@ MonoBehaviour:
   _currentWave: -1
   LastWave: 40
   _cash: 300
-  _currentHealth: 0
+  CurrentHealth: 0
   InitialHealth: 100
   IsWaveRunning: 0
   Paths: []
@@ -14089,17 +14023,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 834242005380108154, guid: 4fa7824a621d72c419d77f7c478045eb, type: 3}
   m_PrefabInstance: {fileID: 1583796471}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1587361671 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5738759710919411653, guid: f34af640513dbe8478c698273ce5ba57, type: 3}
-  m_PrefabInstance: {fileID: 1464342905419825003}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1594363227
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17361,144 +17284,18 @@ MonoBehaviour:
     - ToSpawn: {fileID: 1180148154098208, guid: 1e1964f40b8ea2c45b9417b207663836, type: 3}
       Amount: 2
       SpawnWaitTime: 3
-  - ToSpawn:
-    - ToSpawn: {fileID: 1180148154098208, guid: 1e1964f40b8ea2c45b9417b207663836, type: 3}
-      Amount: 2
-      SpawnWaitTime: 3
-    - ToSpawn: {fileID: 1965910811585682, guid: 56399f9e53b07d441ba956f0ceacde13, type: 3}
-      Amount: 5
-      SpawnWaitTime: 0.5
-    - ToSpawn: {fileID: 1543346588463464, guid: b44fb43890b183b4a9ad0e6f5d9a070a, type: 3}
-      Amount: 5
-      SpawnWaitTime: 1
-    - ToSpawn: {fileID: 1832056105147992, guid: 7a36bd7a6d6c4694a9d42b3c7fad32e4, type: 3}
-      Amount: 13
-      SpawnWaitTime: 0.6
-    - ToSpawn: {fileID: 1180148154098208, guid: 1e1964f40b8ea2c45b9417b207663836, type: 3}
-      Amount: 2
-      SpawnWaitTime: 3
-  - ToSpawn:
-    - ToSpawn: {fileID: 1180148154098208, guid: 1e1964f40b8ea2c45b9417b207663836, type: 3}
-      Amount: 2
-      SpawnWaitTime: 3
-    - ToSpawn: {fileID: 1965910811585682, guid: 56399f9e53b07d441ba956f0ceacde13, type: 3}
-      Amount: 5
-      SpawnWaitTime: 0.5
-    - ToSpawn: {fileID: 1543346588463464, guid: b44fb43890b183b4a9ad0e6f5d9a070a, type: 3}
-      Amount: 5
-      SpawnWaitTime: 1
-    - ToSpawn: {fileID: 1832056105147992, guid: 7a36bd7a6d6c4694a9d42b3c7fad32e4, type: 3}
-      Amount: 13
-      SpawnWaitTime: 0.6
-    - ToSpawn: {fileID: 1180148154098208, guid: 1e1964f40b8ea2c45b9417b207663836, type: 3}
-      Amount: 3
-      SpawnWaitTime: 4
   - ToSpawn: []
   - ToSpawn: []
   - ToSpawn: []
-  - ToSpawn:
-    - ToSpawn: {fileID: 1182029683073452, guid: 2dd667d58afbe9f4c88da1cb46d339e2, type: 3}
-      Amount: 2
-      SpawnWaitTime: 3
-    - ToSpawn: {fileID: 1965910811585682, guid: 56399f9e53b07d441ba956f0ceacde13, type: 3}
-      Amount: 5
-      SpawnWaitTime: 0.5
-    - ToSpawn: {fileID: 1543346588463464, guid: b44fb43890b183b4a9ad0e6f5d9a070a, type: 3}
-      Amount: 5
-      SpawnWaitTime: 1
-    - ToSpawn: {fileID: 1832056105147992, guid: 7a36bd7a6d6c4694a9d42b3c7fad32e4, type: 3}
-      Amount: 13
-      SpawnWaitTime: 0.6
-    - ToSpawn: {fileID: 1180148154098208, guid: 1e1964f40b8ea2c45b9417b207663836, type: 3}
-      Amount: 2
-      SpawnWaitTime: 3
   - ToSpawn: []
-  - ToSpawn:
-    - ToSpawn: {fileID: 1940725992751248, guid: 347eb69d906e8ac43bf1795f12969bcb, type: 3}
-      Amount: 2
-      SpawnWaitTime: 3
-    - ToSpawn: {fileID: 1675308188217246, guid: 62ae8e86000119d4cb5f57b6baeff572, type: 3}
-      Amount: 20
-      SpawnWaitTime: 0.5
-    - ToSpawn: {fileID: 1543346588463464, guid: b44fb43890b183b4a9ad0e6f5d9a070a, type: 3}
-      Amount: 5
-      SpawnWaitTime: 1
-    - ToSpawn: {fileID: 1832056105147992, guid: 7a36bd7a6d6c4694a9d42b3c7fad32e4, type: 3}
-      Amount: 13
-      SpawnWaitTime: 0.6
-    - ToSpawn: {fileID: 1180148154098208, guid: 1e1964f40b8ea2c45b9417b207663836, type: 3}
-      Amount: 2
-      SpawnWaitTime: 3
-  - ToSpawn:
-    - ToSpawn: {fileID: 1965910811585682, guid: 56399f9e53b07d441ba956f0ceacde13, type: 3}
-      Amount: 5
-      SpawnWaitTime: 0.5
-    - ToSpawn: {fileID: 1182029683073452, guid: 2dd667d58afbe9f4c88da1cb46d339e2, type: 3}
-      Amount: 2
-      SpawnWaitTime: 3
-    - ToSpawn: {fileID: 1543346588463464, guid: b44fb43890b183b4a9ad0e6f5d9a070a, type: 3}
-      Amount: 5
-      SpawnWaitTime: 1
-    - ToSpawn: {fileID: 1832056105147992, guid: 7a36bd7a6d6c4694a9d42b3c7fad32e4, type: 3}
-      Amount: 13
-      SpawnWaitTime: 0.6
-    - ToSpawn: {fileID: 1832056105147992, guid: 7a36bd7a6d6c4694a9d42b3c7fad32e4, type: 3}
-      Amount: 5
-      SpawnWaitTime: 1.5
-  - ToSpawn:
-    - ToSpawn: {fileID: 1965910811585682, guid: 56399f9e53b07d441ba956f0ceacde13, type: 3}
-      Amount: 5
-      SpawnWaitTime: 0.5
-    - ToSpawn: {fileID: 1182029683073452, guid: 2dd667d58afbe9f4c88da1cb46d339e2, type: 3}
-      Amount: 2
-      SpawnWaitTime: 3
-    - ToSpawn: {fileID: 1543346588463464, guid: b44fb43890b183b4a9ad0e6f5d9a070a, type: 3}
-      Amount: 5
-      SpawnWaitTime: 1
-    - ToSpawn: {fileID: 1832056105147992, guid: 7a36bd7a6d6c4694a9d42b3c7fad32e4, type: 3}
-      Amount: 13
-      SpawnWaitTime: 0.6
-    - ToSpawn: {fileID: 1832056105147992, guid: 7a36bd7a6d6c4694a9d42b3c7fad32e4, type: 3}
-      Amount: 5
-      SpawnWaitTime: 1.5
-  - ToSpawn:
-    - ToSpawn: {fileID: 1182029683073452, guid: 2dd667d58afbe9f4c88da1cb46d339e2, type: 3}
-      Amount: 2
-      SpawnWaitTime: 3
-    - ToSpawn: {fileID: 1543346588463464, guid: b44fb43890b183b4a9ad0e6f5d9a070a, type: 3}
-      Amount: 5
-      SpawnWaitTime: 1
-    - ToSpawn: {fileID: 1675308188217246, guid: 62ae8e86000119d4cb5f57b6baeff572, type: 3}
-      Amount: 5
-      SpawnWaitTime: 0.5
-    - ToSpawn: {fileID: 1832056105147992, guid: 7a36bd7a6d6c4694a9d42b3c7fad32e4, type: 3}
-      Amount: 13
-      SpawnWaitTime: 0.6
-    - ToSpawn: {fileID: 1180148154098208, guid: 1e1964f40b8ea2c45b9417b207663836, type: 3}
-      Amount: 5
-      SpawnWaitTime: 1.5
-  - ToSpawn:
-    - ToSpawn: {fileID: 1675308188217246, guid: 62ae8e86000119d4cb5f57b6baeff572, type: 3}
-      Amount: 20
-      SpawnWaitTime: 0.5
-    - ToSpawn: {fileID: 1940725992751248, guid: 347eb69d906e8ac43bf1795f12969bcb, type: 3}
-      Amount: 15
-      SpawnWaitTime: 0.7
-    - ToSpawn: {fileID: 1965910811585682, guid: 56399f9e53b07d441ba956f0ceacde13, type: 3}
-      Amount: 10
-      SpawnWaitTime: 0.85
-    - ToSpawn: {fileID: 1543346588463464, guid: b44fb43890b183b4a9ad0e6f5d9a070a, type: 3}
-      Amount: 8
-      SpawnWaitTime: 1
-    - ToSpawn: {fileID: 1832056105147992, guid: 7a36bd7a6d6c4694a9d42b3c7fad32e4, type: 3}
-      Amount: 5
-      SpawnWaitTime: 1
-    - ToSpawn: {fileID: 1182029683073452, guid: 2dd667d58afbe9f4c88da1cb46d339e2, type: 3}
-      Amount: 6
-      SpawnWaitTime: 0.9
-    - ToSpawn: {fileID: 1180148154098208, guid: 1e1964f40b8ea2c45b9417b207663836, type: 3}
-      Amount: 3
-      SpawnWaitTime: 4
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
+  - ToSpawn: []
   m_pathManager: {fileID: 1753510829}
 --- !u!1001 &2037731282
 PrefabInstance:
@@ -18592,7 +18389,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6453563054004309459, guid: f34af640513dbe8478c698273ce5ba57, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8453272432515745156, guid: f34af640513dbe8478c698273ce5ba57, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -18605,10 +18402,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6453563054004309459, guid: f34af640513dbe8478c698273ce5ba57, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7527837075329840518}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f34af640513dbe8478c698273ce5ba57, type: 3}
 --- !u!1001 &1849490426590129646
 PrefabInstance:
@@ -18908,21 +18702,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4537064856248764128, guid: f34af640513dbe8478c698273ce5ba57, type: 3}
   m_PrefabInstance: {fileID: 1464342905419825003}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7527837075329840518
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 17108108}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f317317d9ba4d494e94c6c191ec8d80b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Title: {fileID: 218253348}
-  Desc: {fileID: 610282969}
-  CurrentWave: {fileID: 1587361671}
 --- !u!1001 &8019323176494843845
 PrefabInstance:
   m_ObjectHideFlags: 0
