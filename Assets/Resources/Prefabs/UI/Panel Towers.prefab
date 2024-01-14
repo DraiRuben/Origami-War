@@ -338,6 +338,22 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - eventID: 13
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8329100416950090841}
+          m_TargetAssemblyTypeName: UITower, Assembly-CSharp
+          m_MethodName: SelectTower
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &8329100416950090841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1676,6 +1692,22 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - eventID: 13
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 6693243224606018421}
+          m_TargetAssemblyTypeName: UITower, Assembly-CSharp
+          m_MethodName: SelectTower
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &5427091356862925109
 GameObject:
   m_ObjectHideFlags: 0
@@ -2970,6 +3002,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Delegates:
   - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1636063196975524602}
+          m_TargetAssemblyTypeName: UITower, Assembly-CSharp
+          m_MethodName: SelectTower
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 13
     callback:
       m_PersistentCalls:
         m_Calls:

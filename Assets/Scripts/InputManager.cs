@@ -19,21 +19,18 @@ public class InputManager : MonoBehaviour
 
     public void Drop(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (DragAndDrop.Instance._raycast && DragAndDrop.Instance._canDrop)
         {
-            if (DragAndDrop.Instance._raycast && DragAndDrop.Instance._canDrop)
+            DragAndDrop.Instance.Drop();
+        }
+        else if (_HideUI)
+        {
+            UITowerInformation.Instance.gameObject.SetActive(false);
+            if (SelectedTower != null)
             {
-                DragAndDrop.Instance.Drop();
+                SelectedTower.transform.GetChild(0).gameObject.SetActive(false);
             }
-            else if (_HideUI)
-            {
-                UITowerInformation.Instance.gameObject.SetActive(false);
-                if (SelectedTower != null)
-                {
-                    SelectedTower.transform.GetChild(0).gameObject.SetActive(false);
-                }
-                SelectedTower = null;
-            }
+            SelectedTower = null;
         }
     }
 

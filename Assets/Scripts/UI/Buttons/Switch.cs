@@ -73,10 +73,20 @@ public class Switch : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("AutoWave") == 1)
         {
-            OnClickSwitch();
+            ImmediateEnable();
         }
         if (SceneManager.GetActiveScene().buildIndex == 1)
             transform.parent.parent.parent.gameObject.SetActive(false);
+    }
+    private void ImmediateEnable()
+    {
+        isOn = true;
+        Vector2 fromPosition = button.anchoredPosition;
+        Vector2 toPosition = (isOn) ? new Vector2(switchRectTr.sizeDelta.x - buttonStartPosTmp, 0) : new Vector2(buttonStartPosTmp, 0);
+        Vector2 newPosition2 = Vector2.Lerp(fromPosition, toPosition, 1);
+        button.anchoredPosition = newPosition2;
+
+        backgrounImageAndColor.color = onBackgroundColor;
     }
     public void OnClickSwitch()
     {
@@ -152,8 +162,6 @@ public class Switch : MonoBehaviour
             currentTime += Time.unscaledDeltaTime;
             yield return null;
         }
-        Vector2 newPosition2 = Vector2.Lerp(fromPosition, toPosition, 1);
-        button.anchoredPosition = newPosition2;
         try
         {
             switchIsOn(isOn);

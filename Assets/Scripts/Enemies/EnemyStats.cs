@@ -14,7 +14,7 @@ public class EnemyStats : MonoBehaviour
     public int CurrentHealth
     {
         get { return currentHealth; }
-        set { currentHealth = value; if (value <= 0) { GameState.Instance.Cash += RewardMoney; OnEnemyDeath.Invoke(); } }
+        set { currentHealth = value; if (value <= 0) { GameState.Instance.Cash += RewardMoney; EnemyCount--; OnEnemyDeath.Invoke(); Destroy(gameObject); } }
     }
 
 
@@ -24,8 +24,6 @@ public class EnemyStats : MonoBehaviour
     private void Awake()
     {
         currentHealth = MaxHealth;
-        OnEnemyDeath.AddListener(()=>EnemyCount--);
-        OnEnemyDeath.AddListener(()=>Destroy(gameObject));
         EnemyCount++;
     }
     public void TakeDOT(int DOT, float Duration, float Interval)

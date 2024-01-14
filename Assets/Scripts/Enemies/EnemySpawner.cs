@@ -51,9 +51,9 @@ public class EnemySpawner : MonoBehaviour
             EnemyComp.OnEnemyDeath.AddListener(TryEndWave);
 
             m_pathManager.AddEnemyToManager(EnemyComp);
-            yield return new WaitForSeconds(WaveQueue.Peek().SpawnWaitTime);
 
-            //after waiting we try to see if we need to start spawning the next element, ie: the amount remaining is 0
+            //we try to see if we need to start spawning the next element after waiting, ie: the amount remaining is 0
+            float WaitTime = WaveQueue.Peek().SpawnWaitTime;
             if (RemainingCountToSpawn <= 0)
             {
                 WaveQueue.Dequeue();
@@ -61,7 +61,7 @@ public class EnemySpawner : MonoBehaviour
                 if (Info != null)
                     RemainingCountToSpawn = Info.Amount;
             }
-
+            yield return new WaitForSeconds(WaitTime);
         }
         //do something there to indicate that we finished spawning things,
         //and as such if the player kills everything we spawned and there isn't any other spawners that are still spawning things then the wave can end
@@ -73,6 +73,7 @@ public class EnemySpawner : MonoBehaviour
         var empty = Spawners.All(x => x.WaveQueue.Count <= 0);
         if (EnemyStats.EnemyCount <= 0 && empty)
         {
+            Debug.Log("end");
             WaveTransition.Instance.EndWave();
         }
     }
