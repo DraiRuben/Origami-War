@@ -12182,7 +12182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d7cc57ac535ef14382a90af1e80343a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentWave: 4
+  _currentWave: -1
   LastWave: 40
   _cash: 300
   _currentHealth: 0
